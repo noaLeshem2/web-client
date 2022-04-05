@@ -1,12 +1,11 @@
 
 function LoginPage() {
     function conditionUser() {
-        var username = document.getElementById("username")
-        let text1 = "ab";
-        let text2 = "cd";
-        let result = text1.localeCompare(text2);
-
-        alert('Username or password incorrect')
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+        if(username == "" || password == ""){
+            alert('Username or password incorrect')
+        }
     }
     return (
         <header className="App-header">
@@ -17,7 +16,7 @@ function LoginPage() {
                             Username:<input id="username" placeholder="Enter Username"></input>
                         </div>
                         <div>
-                            Password:<input type="password" placeholder="Enter Password"></input>
+                            Password:<input type="password" id="password" placeholder="Enter Password"></input>
                         </div>
                         <div>
                             Not registered? <a href='/Register' type="button" class="h">Click here</a> to register

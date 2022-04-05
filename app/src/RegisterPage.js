@@ -2,12 +2,12 @@ import LoginPage from "./LoginPage";
 
 function RegisterPage() {
     function conditionUser() {
-        var username = document.getElementById("username")
-        let text1 = "ab";
-        let text2 = "cd";
-        let result = text1.localeCompare(text2);
-        
-        alert('Username or password incorrect')
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+        if(username == "" || password == ""){
+            alert('Username or password incorrect')
+        }
+       
     }
     return (
         <header className="App-header">
@@ -18,7 +18,7 @@ function RegisterPage() {
                             Username:<input id="username" placeholder="Enter Username"></input>
                         </div>
                         <div>
-                            Password:<input type="password" placeholder="Enter Password"></input>
+                            Password:<input type="password" id="password" placeholder="Enter Password"></input>
                         </div>
                         <div>
                             Display Name:<input type="display-Name" placeholder="Enter Name"></input>
