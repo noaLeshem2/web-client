@@ -1,5 +1,13 @@
 
 function LoginPage() {
+    function conditionUser() {
+        var username = document.getElementById("username")
+        let text1 = "ab";
+        let text2 = "cd";
+        let result = text1.localeCompare(text2);
+
+        alert('Username or password incorrect')
+    }
     return (
         <header className="App-header">
             <div class="container">
@@ -14,7 +22,11 @@ function LoginPage() {
                         <div>
                             Not registered? <a href='/Register' type="button" class="h">Click here</a> to register
                         </div>
-                        <div><button type="button" class="btn btn-outline-primary">Login</button></div>
+                        <div>
+                            <button onClick={() => conditionUser()}>
+                                login
+                            </button>
+                        </div>
                     </ul>
                 </div>
             </div>
