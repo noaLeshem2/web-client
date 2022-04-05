@@ -13,8 +13,14 @@
   }
 }
 
+.fooo{
+  width: 400px;
+  length: 100px;
+  background-color: lightblue;
+}
+
 .App-header {
-  background-color: #282c34;
+  background-color: burlywood;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
