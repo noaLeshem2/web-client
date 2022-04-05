@@ -24,7 +24,7 @@ function RegisterPage() {
                             Display Name:<input type="display-Name" placeholder="Enter Name"></input>
                         </div>
                         <div>
-                            Already registered? <a href='' type="button" class="h">Click here</a> to login
+                            Already registered? <a href='/' type="button" class="h">Click here</a> to login
                         </div>
                         <button onClick={() => conditionUser()}>
                             login
