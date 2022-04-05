@@ -12,7 +12,7 @@ function LoginPage() {
                             Password:<input type="text" placeholder="Enter Password"></input>
                         </div>
                         <div>
-                            Not registered? <a href="RegisterPage.js" type="button" class="h">Click here</a> to register
+                            Not registered? <a href='' type="button" class="h">Click here</a> to register
                         </div>
                         <div><button type="button" class="btn btn-outline-primary">Login</button></div>
                     </ul>
