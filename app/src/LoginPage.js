@@ -1,4 +1,4 @@
-import RegisterPage from './RegisterPage';
+
 function LoginPage() {
     return (
         <header className="App-header">
@@ -9,10 +9,10 @@ function LoginPage() {
                             Username:<input id="username" placeholder="Enter Username"></input>
                         </div>
                         <div>
-                            Password:<input id="password" placeholder="Enter Password"></input>
+                            Password:<input type="password" placeholder="Enter Password"></input>
                         </div>
                         <div>
-                            Not registered? <a href="RegisterPage.js" type="button" class="h">Click here</a> to register
+                            Not registered? <a href='/Register' type="button" class="h">Click here</a> to register
                         </div>
                         <div><button type="button" class="btn btn-outline-primary">Login</button></div>
                     </ul>
