@@ -6,7 +6,7 @@ function App() {
   return (
     <div classname="Container-fluid">
       <div className="row">
-      <LoginPage></LoginPage>
+      <RegisterPage></RegisterPage>
       </div>
     </div>
   );
