@@ -1,5 +1,6 @@
 import LoginPage from "./LoginPage";
-import users from "./usersList";
+import users from "./usersFolder/usersList";
+
 
 function RegisterPage() {
     function conditionUserRegi() {
