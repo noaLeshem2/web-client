@@ -4,7 +4,7 @@ function LoginPage() {
         var username = document.getElementById("username").value;
         var password = document.getElementById("password").value;
         if(username == "" || password == ""){
-            alert('Username or password incorrect')
+            alert('Please enter all the fields')
         }
     }
     return (
