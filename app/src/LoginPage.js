@@ -27,13 +27,16 @@ function LoginPage() {
         // if the username does not exiest.
         if (position == -1) {
             alert('Username is not exist')
+            return;
         }
 
         // cheack if the password correct.
         if (users[position].password.localeCompare(password) != 0){
             alert('The password is incorrect')
+            return;
         }
         
+
     }
     return (
         <header className="App-header">
