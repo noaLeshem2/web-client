@@ -1,8 +1,29 @@
-import LoginPage from "./LoginPage";
+//import LoginPage from "./LoginPage";
 import users from "./usersFolder/usersList";
+import './RegisterPage.css'
+import logo from "./logo.jpg"
+import * as React from 'react';
+import { useState } from "react";
+import { Button } from 'react-native';
 
+import { useNavigation  } from 'react-router-dom';
 
 function RegisterPage() {
+    const navigation = useNavigation();
+    /*
+    function wrong(){
+        return (
+            <Alert variant="danger" onClose={() => setShow(false)} dismissible>
+              <Alert.Heading>Oh snap! You got an error!</Alert.Heading>
+              <p>
+                Change this and that and try again. Duis mollis, est non commodo
+                luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
+                Cras mattis consectetur purus sit amet fermentum.
+              </p>
+            </Alert>
+          );
+    }
+    */
     function conditionUserRegi() {
         var username = document.getElementById("username").value;
         var password = document.getElementById("password").value;
@@ -11,54 +32,62 @@ function RegisterPage() {
         password = password.trim();
         displayName = displayName.trim();
         // if one of the fieald are empty.
-        if(username == "" || password == "" || displayName == ""){
+        if (username == "" || password == "" || displayName == "") {
             alert('Please entar all fields')
+            navigation.navigation('./LoginPage')
             return;
         }
 
         let len = users.length;
         //cheack if username existed
-        for(let i = 0; i<len; i++) {
-            
-            if (users[i].username.localeCompare(username)==0){
+        for (let i = 0; i < len; i++) {
+
+            if (users[i].username.localeCompare(username) == 0) {
                 alert('This username is already taken. Please choose another one.')
                 return;
             }
         }
-        if (username.length < 4){
+        if (username.length < 4) {
             alert('The user name should be longer than four characters.')
             return;
         }
-        if (password.length < 3){
+        if (password.length < 3) {
             alert('The password should be longer than three characters.')
             return;
         }
-       
+
     }
     return (
-        <header className="App-header">
-            <div class="container">
-                <div class="row justify-content-md-center">
-                    <ul class="fooo">
-                        <div>
-                            Username:<input id="username" placeholder="Enter Username"></input>
-                        </div>
-                        <div>
-                            Password:<input type="password" id="password" placeholder="Enter Password"></input>
-                        </div>
-                        <div>
-                            Display Name:<input type="displayname" id="displayname" placeholder="Enter Name"></input>
-                        </div>
-                        <div>
-                            Already registered? <a href='/' type="button" class="h">Click here</a> to login
-                        </div>
-                        <button onClick={() => conditionUserRegi()}>
-                            login
-                        </button>
-                    </ul>
-                </div>
+        <body className="App-header">
+            <div class="head-line">
+                <img src={logo} alt="Logo" type="logo" />
             </div>
-        </header>
+            <div class="row justify-content-md-center">
+                <div class="fooo">
+                    <div class="loggg">
+                        Register
+                    </div>
+                    <div>
+                        Username:<input type="username" id="username" placeholder="Enter Username"></input>
+                    </div>
+                    <div>
+                        Password:<input type="password" id="password" placeholder="Enter Password"></input>
+                    </div>
+                    <div>
+                        Display Name:<input type="name" id="displayname" placeholder="Enter Name"></input>
+                    </div>
+                    <div>
+                        Already registered? <a href='/' type="button" class="h">Click here</a> to login
+                    </div>
+                    <div>
+                        <button types="button" class="btn btn-lg btn-primary" onClick={() => conditionUserRegi()}>
+                            Register
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </body>
     );
 }
 
