@@ -10,20 +10,6 @@ import { Button } from 'react-native';
 
 function RegisterPage() {
     //const navigation = useNavigation();
-    /*
-    function wrong(){
-        return (
-            <Alert variant="danger" onClose={() => setShow(false)} dismissible>
-              <Alert.Heading>Oh snap! You got an error!</Alert.Heading>
-              <p>
-                Change this and that and try again. Duis mollis, est non commodo
-                luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
-                Cras mattis consectetur purus sit amet fermentum.
-              </p>
-            </Alert>
-          );
-    }
-    */
     function conditionUserRegi() {
         var username = document.getElementById("username").value;
         var password = document.getElementById("password").value;
@@ -40,6 +26,7 @@ function RegisterPage() {
 
         let len = users.length;
         //cheack if username existed
+        
         for (let i = 0; i < len; i++) {
 
             if (users[i].username.localeCompare(username) == 0) {
@@ -55,7 +42,8 @@ function RegisterPage() {
             alert('The password should be longer than three characters.')
             return;
         }
-
+        //mean you can register
+        users.push({username: username, password: password, displayName: displayName, img: logo, time: "", message: "hi"})
     }
     return (
         <body className="App-header">

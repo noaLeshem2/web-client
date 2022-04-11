@@ -7,7 +7,7 @@ import ChatingWith from './ChatingWith';
 
 function App() {
   return (
-      <ChatPage></ChatPage>
+      <RegisterPage></RegisterPage>
 
   );
 }
