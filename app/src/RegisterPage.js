@@ -4,7 +4,7 @@ import './RegisterPage.css'
 import logo from "./logo.jpg"
 import * as React from 'react';
 import { useState } from "react";
-import { Button } from 'react-native';
+//import { Button } from 'react-native';
 
 //import { useNavigation  } from 'react-router-dom';
 
