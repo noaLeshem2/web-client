@@ -1,0 +1,30 @@
+
+#circle{
+    width: 90%;
+    height: 90%;
+    border-radius: 50%;
+    background: red;
+}
+
+a.list-group-item.list-group-item-action{
+    padding:0%;
+}
+.col-10{
+    padding:0%;
+}
+
+.row{
+    --bs-gutter-x: none;
+}
+
+.overflow-ellipsis {
+    text-overflow: ellipsis;
+}
+
+
+.name{
+    white-space: nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+

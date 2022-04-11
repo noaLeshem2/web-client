@@ -1,0 +1,38 @@
+*, ::after, ::before {
+  box-sizing:content-box;
+}
+.chating{
+  border: 2px solid lightgray;
+  margin:2%;
+  position:fixed;
+  width: 96%;
+  height:90%;
+}
+
+.chatList {
+  width: 100%;
+  height:74.5%;
+  list-style-type: none;
+  float: left;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.messages {
+  width:100%;
+  height:74.5%;
+  float: left;
+  background-color: pink;
+  overflow-y: scroll;
+}
+
+.chatList .row:hover{
+  background-color:lightcyan;
+  cursor: pointer;
+  border-radius: 10px;
+  border: 2px solid rgb(139, 196, 224); 
+}
+.chatList .row{
+  border: 2px solid lightgray;
+}
+

@@ -21,18 +21,29 @@ body{
     width: 100%;
     text-align: center;
     align-items: center;
-    padding: 2vh;
-    padding-left: 10vh;
-    padding-right: 10vh;
+    padding-top: 2vh;
+    padding-bottom: 3vh;
+    padding-left: 5vh;
+    padding-right: 5vh;
     vertical-align: center;
     border-radius: 25px;
     color: rgb(73, 134, 148);
 }
 
-.row.justify-content-md-center{
+row.justify-content-md-center{
     /*padding: 20vh;*/
-    
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 100%;
+    padding-right:inherit;
+    padding-left:inherit;
+    margin-top:auto; 
+    padding-left: 5vh;
+    padding-right: 5vh;
+    background-color: rgb(240, 226, 225, 0.8);
 }
+    
+
 .loggg{
     padding-bottom: 1vh;
     font-size:120%;
@@ -46,17 +57,7 @@ img[type="logo"] {
    max-height: 20vh;
   }
 
-  .row>* {
-    flex-shrink: 0;
-    width: 100%;
-    max-width: 100%;
-    padding-right:inherit;
-    padding-left:inherit;
-    margin-top:auto; 
-    padding-left: 5vh;
-    padding-right: 5vh;
-    background-color: rgb(240, 226, 225, 0.8);
-}
+
 
 .row {
     --bs-gutter-x:0;
@@ -79,7 +80,7 @@ img[type="logo"] {
 }
  a[type="button"] {
     color: rgb(173, 205, 210);
-    
+    padding: 1vh;
   }
 
 .registering{

@@ -6,10 +6,10 @@ import * as React from 'react';
 import { useState } from "react";
 import { Button } from 'react-native';
 
-import { useNavigation  } from 'react-router-dom';
+//import { useNavigation  } from 'react-router-dom';
 
 function RegisterPage() {
-    const navigation = useNavigation();
+    //const navigation = useNavigation();
     /*
     function wrong(){
         return (
@@ -34,7 +34,7 @@ function RegisterPage() {
         // if one of the fieald are empty.
         if (username == "" || password == "" || displayName == "") {
             alert('Please entar all fields')
-            navigation.navigation('./LoginPage')
+            //navigation.navigation('./LoginPage')
             return;
         }
 

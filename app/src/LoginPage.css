@@ -18,9 +18,10 @@
     width: 100%;
     text-align: center;
     align-items: center;
-    padding: 2vh;
-    padding-left: 10vh;
-    padding-right: 10vh;
+    padding-top: 2vh;
+    padding-bottom: 5vh;
+    padding-left: 5vh;
+    padding-right: 5vh;
     vertical-align: center;
     border-radius: 25px;
     color: rgb(73, 134, 148);
@@ -39,7 +40,8 @@ img[type="logo"] {
     padding-bottom: 1.5vh;
   }
 
-  .row>* {
+  row.justify-content-md-center{
+    /*padding: 20vh;*/
     flex-shrink: 0;
     width: 100%;
     max-width: 100%;
@@ -88,6 +90,3 @@ input{
     background-color:rgb(173, 205, 210) !important;
 }
 
-.button{
-    
-}
