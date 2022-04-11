@@ -1,5 +1,5 @@
 import './ChatingWith.css';
-function ChatingWith({ displayName, message, img, time }) {
+function ChatingWith({ displayName, img, time }) {
     return (
         <>
             <div class="container">
