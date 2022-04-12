@@ -4,14 +4,22 @@ import User from './usersFolder/User';
 import users from './usersFolder/usersList.js';
 import sami from './usersFolder/profile/sami.jpg';
 import Message from './Message';
-function ChatPage({ }) {
+import TopLeftChat from './TopLeftChat';
+function ChatPage({username}) {
     const userList = users.map((user, key) => {
         return <User {...user} key={key} />
     });
+    
+    var x= users[];
     return (
         <>
             <div className="row chating">
                 <div className="col-3">
+
+            <div className="box">
+                    
+                    <TopLeftChat username={username}/>
+                    </div>
                     <div className="chatList">
                         {userList}
                     </div>
@@ -21,7 +29,7 @@ function ChatPage({ }) {
                     <div className="messages">
 
                         <div>
-                            <ChatingWith displayName={"shir"} time={"13:00"} message={"hi"} img={sami} />
+                            <ChatingWith displayName={x.displayName} time={"13:00"} message={"hi"} img={sami} />
                         </div>
                         <div className="chatings">
 

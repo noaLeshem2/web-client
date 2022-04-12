@@ -83,6 +83,10 @@ img[type="logo"] {
     padding: 1vh;
   }
 
+  a[type="button"]:hover {
+    color: rgb(173, 205, 210,0.5);
+  }
+
 .registering{
     padding-top: 1%;
     padding-bottom: 3%;

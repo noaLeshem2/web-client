@@ -6,28 +6,17 @@ import * as React from 'react';
 import { useState } from "react";
 //import { Button } from 'react-native';
 
-import { useNavigate  } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 
 function RegisterPage() {
+
+    //const navigate = useNavigate();
+    //const navigate = useNavigate();
     
-    /*
-    function wrong(){
-        return (
-            <Alert variant="danger" onClose={() => setShow(false)} dismissible>
-              <Alert.Heading>Oh snap! You got an error!</Alert.Heading>
-              <p>
-                Change this and that and try again. Duis mollis, est non commodo
-                luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
-                Cras mattis consectetur purus sit amet fermentum.
-              </p>
-            </Alert>
-          );
-    }
-    */ 
-    const navigate = useNavigate();
     function conditionUserRegi() {
-       
+        //const navigate = useNavigate();
         var username = document.getElementById("username").value;
         var password = document.getElementById("password").value;
         var displayName = document.getElementById("displayname").value;
@@ -37,7 +26,7 @@ function RegisterPage() {
         // if one of the fieald are empty.
         if (username == "" || password == "" || displayName == "") {
             alert('Please entar all fields')
-            navigate("/LoginPage");
+            //navigate("/LoginPage");
             //return;
         }
 
