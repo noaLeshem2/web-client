@@ -17,7 +17,7 @@ function App() {
       </BrowserRouter> } */
 
 
-      <ChatPage></ChatPage>
+      <ChatPage  username={"inbal33"}/>
 
   );
 }
