@@ -43,6 +43,7 @@ function RegisterPage() {
 
         let len = users.length;
         //cheack if username existed
+        
         for (let i = 0; i < len; i++) {
 
             if (users[i].username.localeCompare(username) == 0) {
@@ -58,7 +59,8 @@ function RegisterPage() {
             alert('The password should be longer than three characters.')
             return;
         }
-
+        //mean you can register
+        users.push({username: username, password: password, displayName: displayName, img: logo, time: "", message: "hi"})
     }
     return (
         <body className="App-header">
