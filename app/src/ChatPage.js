@@ -7,7 +7,8 @@ import Message from './Message';
 import TopLeftChat from './TopLeftChat';
 import userMap from './usersFolder/usersList.js';
 function ChatPage({username}) {
-    const userList = users.map((user, key) => {
+    var y = userMap[1];
+    const userList = y.map((user, key) => {
         return <User {...user} key={key} />
     });
     

@@ -11,9 +11,9 @@ function User({ displayName, message, img, time }) {
                     <div class="col-10">
                         <div class="d-flex w-100 justify-content-between">
                             <h5 class="mb-1 name">{displayName}</h5>
-                            <small class="col-2">{time}</small>
+                            {/*<small class="col-2">{time}</small>*/}
                         </div>
-                        <p class="mb-1 name">{message}</p>
+                        {/*<p class="mb-1 name">{message}</p>*/}
                     </div>
                 </div>
             </a>
