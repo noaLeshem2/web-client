@@ -10,8 +10,7 @@
 
 }
 .fooo{
-    background-color: rgb(240, 226, 225, 0.8);
-    
+    background-color: rgb(240, 226, 225, 0.8);  
     border-color: transparent;
     position:relative;
     height: 120%;
@@ -57,6 +56,10 @@ img[type="logo"] {
     --bs-gutter-x:0;
     --bs-gutter-y: 0;
 }
+
+a[type="button"]:hover {
+    color: rgb(173, 205, 210,0.5);
+  }
 
 input{
     background-color: rgb(240, 226, 225, 0.9);

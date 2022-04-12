@@ -2,7 +2,10 @@ import users from "./usersFolder/usersList";
 import ChatPage from "./LoginPage";
 import './LoginPage.css'
 import logo from "./logo.jpg"
+import {Link, Route} from 'react-router-dom'
+
 function LoginPage() {
+    
     function conditionUser() {
         var username = document.getElementById("username").value;
         var password = document.getElementById("password").value;
@@ -56,7 +59,7 @@ function LoginPage() {
                         Password:<input type="password" id="password" placeholder="Enter Password"></input>
                     </div>
                     <div class="registering">
-                        Not registered? <a href='/Register' type="button" class="h">Click here</a> to register
+                        Not registered? <Link to='/RegisterPage' class="h">Click here</Link> to register
                     </div>
                     <div>
                         <button types="button" class="btn btn-lg btn-primary" onClick={() => conditionUser()}>

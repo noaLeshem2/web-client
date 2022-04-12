@@ -4,13 +4,19 @@ import './RegisterPage.css'
 import logo from "./logo.jpg"
 import * as React from 'react';
 import { useState } from "react";
-//import { Button } from 'react-native';
+import { Button } from 'react-native';
 
-//import { useNavigation  } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+
 
 function RegisterPage() {
-    //const navigation = useNavigation();
+
+    //const navigate = useNavigate();
+    //const navigate = useNavigate();
+    
     function conditionUserRegi() {
+        //const navigate = useNavigate();
         var username = document.getElementById("username").value;
         var password = document.getElementById("password").value;
         var displayName = document.getElementById("displayname").value;
@@ -20,7 +26,7 @@ function RegisterPage() {
         // if one of the fieald are empty.
         if (username == "" || password == "" || displayName == "") {
             alert('Please entar all fields')
-            //navigation.navigation('./LoginPage')
+            //navigate("/LoginPage");
             return;
         }
 
