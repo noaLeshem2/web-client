@@ -5,12 +5,13 @@ import users from './usersFolder/usersList.js';
 import sami from './usersFolder/profile/sami.jpg';
 import Message from './Message';
 import TopLeftChat from './TopLeftChat';
+import userMap from './usersFolder/usersList.js';
 function ChatPage({username}) {
     const userList = users.map((user, key) => {
         return <User {...user} key={key} />
     });
     
-    var x= users[];
+    var x= users[1];
     return (
         <>
             <div className="row chating">

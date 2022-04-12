@@ -1,14 +1,15 @@
 //import LoginPage from "./LoginPage";
-import users from "./usersFolder/usersList";
+//import users from "./usersFolder/usersList";
 import './RegisterPage.css'
 import logo from "./logo.jpg"
 import * as React from 'react';
 import { useState } from "react";
 //import { Button } from 'react-native';
 
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
+import {Link, Route} from 'react-router-dom'
 
+import userMap from "./usersFolder/usersList";
+// Already registered? <a href='/' type="button" class="h">Click here</a> to login
 
 function RegisterPage() {
 
@@ -30,6 +31,7 @@ function RegisterPage() {
             //return;
         }
 
+        /*
         let len = users.length;
         //cheack if username existed
         
@@ -40,6 +42,12 @@ function RegisterPage() {
                 return;
             }
         }
+        */
+
+        if(userMap.hasOwnProperty(username)){
+            alert('This username is already taken. Please choose another one.')
+            return;
+        }
         if (username.length < 4) {
             alert('The user name should be longer than four characters.')
             return;
@@ -48,8 +56,9 @@ function RegisterPage() {
             alert('The password should be longer than three characters.')
             return;
         }
+
         //mean you can register
-        users.push({username: username, password: password, displayName: displayName, img: logo, time: "", message: "hi"})
+        //users.push({username: username, password: password, displayName: displayName, img: logo, time: "", message: "hi"})
     }
     return (
         <body className="App-header">
@@ -71,7 +80,7 @@ function RegisterPage() {
                         Display Name:<input type="name" id="displayname" placeholder="Enter Name"></input>
                     </div>
                     <div>
-                        Already registered? <a href='/' type="button" class="h">Click here</a> to login
+                    <p> Already registered? <Link to='/' class="h">Click here</Link> to register</p>
                     </div>
                     <div>
                         <button types="button" class="btn btn-lg btn-primary" onClick={() => conditionUserRegi()}>

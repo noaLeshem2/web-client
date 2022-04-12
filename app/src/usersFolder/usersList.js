@@ -16,6 +16,21 @@ var users = [{ username: "inbal33", password: "1020", displayName: "Inbal", img:
 { username: "yoval99", password: "09876", displayName: "Amit", img: tituf, time: "12:30", message: "Hapoel Tel Aviv is the winner" }];
 
 
+
+var userMap = {inbal33: {password: "1020", displayName: "Inbal", img: elsa},
+            noale10: {password: "454545", displayName: "Noa", img: olaf},
+            yoval99: {password: "09876", displayName: "Amit", img: tituf},
+            harel21: {password: "0167", displayName: "Harel", img: Arthur},
+            tomer50: {password: "2020", displayName: "Harel", img: Arthur}};
+
+
+
+
+
+
+
+
+
 var usersno = [{ username: "inbal33", password: "1020", displayName: "Inbal", img: elsa,
     myFriends:[{friend: "noale10", chat:[{type: 1, text:"hiii", time: "10:00", mine:true},
                                         {type: 1, text:"how are you?", time: "10:01", mine:true},
@@ -48,3 +63,4 @@ var usersno = [{ username: "inbal33", password: "1020", displayName: "Inbal", im
 
 users.sort((a, b) => a.time < b.time ? 1 : -1)
 export default users;
+//export default userMap;

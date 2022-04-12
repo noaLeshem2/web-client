@@ -57,9 +57,7 @@ img[type="logo"] {
     --bs-gutter-y: 0;
 }
 
-a[type="button"]:hover {
-    color: rgb(173, 205, 210,0.5);
-  }
+
 
 input{
     background-color: rgb(240, 226, 225, 0.9);
@@ -74,11 +72,13 @@ input{
     
 }
 
- a[type="button"] {
+.h {
     color: rgb(173, 205, 210);
     
   }
-
+.h:hover {
+    color: rgba(65, 142, 155, 0.5);
+  }
 .registering{
     padding-top: 1%;
     padding-bottom: 3%;

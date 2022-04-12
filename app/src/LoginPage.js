@@ -1,8 +1,11 @@
 import users from "./usersFolder/usersList";
 import ChatPage from "./LoginPage";
 import './LoginPage.css'
+import './RegisterPage'
 import logo from "./logo.jpg"
 import {Link, Route} from 'react-router-dom'
+import ReactDOM from 'react-dom'
+import userMap from "./usersFolder/usersList";
 
 function LoginPage() {
     
@@ -17,6 +20,30 @@ function LoginPage() {
             return;
         }
 
+        //userMap.username.password.localeCompare(password)
+        // cheack if the username exiest.
+        if (userMap.hasOwnProperty(username)) {
+             // cheack if the password correct.
+             alert('existeddd')
+            //var x = users.username;
+            if( userMap[username].password.localeCompare(password) != 0){
+                alert('The password is incorrect')
+                return;
+            }
+            return;
+         // the username does not exiest.
+        } else{
+            alert('Username is not exist')
+        }
+
+        /*
+        var x = users[username];
+        if(x==null){
+            alert('bed');
+        }
+        else{
+            alert('good')
+        }
         let len = users.length;
         let position = -1;
         //cheack if username existed
@@ -40,6 +67,8 @@ function LoginPage() {
             return;
         }
 
+        */
+
 
     }
     return (
@@ -59,7 +88,7 @@ function LoginPage() {
                         Password:<input type="password" id="password" placeholder="Enter Password"></input>
                     </div>
                     <div class="registering">
-                        Not registered? <Link to='/RegisterPage' class="h">Click here</Link> to register
+                        <p> Not registered? <Link to='/RegisterPage' class="h">Click here</Link> to register</p>
                     </div>
                     <div>
                         <button types="button" class="btn btn-lg btn-primary" onClick={() => conditionUser()}>
@@ -72,5 +101,6 @@ function LoginPage() {
         </body>
     );
 }
-
+const rootElement = document.getElementById("root")
+ReactDOM.createPortal(<LoginPage />, rootElement)
 export default LoginPage;
