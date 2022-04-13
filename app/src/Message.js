@@ -1,6 +1,7 @@
 import './messageList';
 import './Message.css';
-function Message({ text, time, mine }) {
+function Message({text, time, mine}) {
+    
     if (mine === "0") {
         return (
             <>
