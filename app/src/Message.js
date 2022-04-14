@@ -1,20 +1,42 @@
-import './messageList'
-function Message({img, text, time, to, sent}) {
-        
+import './messageList';
+import './Message.css';
+function Message({ text, time, mine }) {
+    if (mine === "0") {
         return (
             <>
-                <div class="card mb-3">
-                    <div class="row xs-0">
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title">{to}</h5>
-                                <p class="card-text">{text}</p>
-                                <p class="card-text"><small class="text-muted">{time}</small></p>
+                <div class="row message-body">
+                    <div class="col-sm-12">
+                        <div class="receiver">
+                            <div class="message-text">
+                               {text}
                             </div>
+                            <span class="message-time pull-right">
+                               {time}
+                            </span>
                         </div>
                     </div>
                 </div>
             </>
         );
+    }
+    if (mine === "1") {
+        return (
+            <>
+               <div class="row message-body">
+                    <div class="col-sm-12">
+                        <div class="sender">
+                            <div class="message-text">
+                               {text}
+                            </div>
+                            <span class="message-time pull-right">
+                               {time}
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </>
+        );
+    }
+
 }
 export default Message;

@@ -6,68 +6,41 @@ import logo from "./logo.jpg"
 import {Link, Route} from 'react-router-dom'
 import ReactDOM from 'react-dom'
 import userMap from "./usersFolder/usersList";
+import { useNavigate } from "react-router-dom";
 
 function LoginPage() {
-    
+    let navigate = useNavigate();
     function conditionUser() {
-        var username = document.getElementById("username").value;
+        var userName = document.getElementById("username").value;
         var password = document.getElementById("password").value;
-        username = username.trim();
+        userName = userName.trim();
         password = password.trim();
+
+
+        
         // if one of the fieald are empty.
-        if (username == "" || password == "") {
+        if (userName == "" || password == "") {
             alert('Please entar all fields')
             return;
         }
 
-        //userMap.username.password.localeCompare(password)
+       
         // cheack if the username exiest.
-        if (userMap.hasOwnProperty(username)) {
+        if (userMap.hasOwnProperty(userName)) {
              // cheack if the password correct.
-             alert('existeddd')
             //var x = users.username;
-            if( userMap[username].password.localeCompare(password) != 0){
+            if( userMap[userName].password.localeCompare(password) != 0){
                 alert('The password is incorrect')
                 return;
             }
-            return;
          // the username does not exiest.
         } else{
             alert('Username is not exist')
         }
 
-        /*
-        var x = users[username];
-        if(x==null){
-            alert('bed');
-        }
-        else{
-            alert('good')
-        }
-        let len = users.length;
-        let position = -1;
-        //cheack if username existed
-        for (let i = 0; i < len; i++) {
-            //const username
-            if (users[i].username.localeCompare(username) == 0) {
-                position = i;
-                alert('good job')
-            }
-        }
+        navigate("/ChatPage", { state: {username: userName }})
+        //navigate("/ChatPage",  { username: userName } );
 
-        // if the username does not exiest.
-        if (position == -1) {
-            alert('Username is not exist')
-            return;
-        }
-
-        // cheack if the password correct.
-        if (users[position].password.localeCompare(password) != 0) {
-            alert('The password is incorrect')
-            return;
-        }
-
-        */
 
 
     }

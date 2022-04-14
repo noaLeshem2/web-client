@@ -1,18 +1,62 @@
 import ChatingWith from './ChatingWith';
 import './ChatPage.css';
 import User from './usersFolder/User';
-import users from './usersFolder/usersList.js';
+import users from './usersFolder/fakeUser';
 import sami from './usersFolder/profile/sami.jpg';
 import Message from './Message';
+import TopLeftChat from './TopLeftChat';
+import userMap from './usersFolder/usersList.js';
+import {useLocation} from "react-router-dom";
+
 function ChatPage() {
+
+    const {state} = useLocation();
+    const {username} = state;
+
+    /*
+    // the my friends map
+    const www = userMap.inbal33.myFriends;
+    //list of the friends name
+    var friendsName = Object.keys(www);
+    //let i = friends.length;
+    var friends = [];
+    for (let i = 0; i < friendsName.length; i++){
+        var obj = friendsName[i];
+        var name = userMap[obj].displayName;
+        
+        var myImage = userMap[obj].img;
+        
+        //the list of the chat info
+        var listMessage = www[obj];
+        var last_message = listMessage[listMessage.length -1].text;
+        var lastTime =  listMessage[listMessage.length -1].time;
+        friends.push({ displayName: name, message:last_message, img: myImage, time: lastTime})
+    }
+  
+
+
+*/
+
+    //alert(username)
+    console.log(username)
+    
+    var y = userMap.inbal33.myFriends;
     const userList = users.map((user, key) => {
         return <User {...user} key={key} />
     });
+    
+    var x = users[1];
+
+
     return (
+        
         <>
             <div className="row chating">
                 <div className="col-3">
-
+            <div className="box">
+                    
+                    <TopLeftChat username={username}/>
+                    </div>
                     <div className="chatList">
                         {userList}
                     </div>
@@ -20,22 +64,30 @@ function ChatPage() {
                 </div>
                 <div className="col-9">
                     <div className="messages">
-                        <div className="container">
-                            <div>
-                                <ChatingWith displayName={"shir"} time={"13:00"} message={"hi"} img={sami} />
-                            </div>
-                            <div>
-                                <Message img={sami} text={"hi"} time={"15:20"} to={"noa"}/>
-                            </div>
+
+                        <div>
+                            <ChatingWith displayName={x.displayName} time={"13:00"} message={"hi"} img={sami} />
                         </div>
+                        <div className="chatings">
+
+                            <Message img={sami} text={"hhhhjhfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww"} time={"15:20"} to={"noa"} mine={"0"} />
+                            <Message img={sami} text={"hhhh"} time={"15:20"} to={"noa"} mine={"1"} />
+                            <Message img={sami} text={"hhhhjhfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww"} time={"15:20"} to={"noa"} mine={"0"} />
+                            <Message img={sami} text={"hhhh"} time={"15:20"} to={"noa"} mine={"1"} />
+                            <Message img={sami} text={"hhhhjhfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww"} time={"15:20"} to={"noa"} mine={"1"} />
+                            <Message img={sami} text={"hhhh"} time={"15:20"} to={"noa"} mine={"0"} />
+                        </div>
+
                     </div>
 
                 </div>
             </div>
 
-
-
         </>
+
+
+
+
     );
 }
 

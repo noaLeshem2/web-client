@@ -1,5 +1,5 @@
 *, ::after, ::before {
-  box-sizing:content-box;
+  box-sizing:border-box;
 }
 .chating{
   border: 2px solid lightgray;
@@ -23,7 +23,8 @@
   height:74.5%;
   float: left;
   background-color: pink;
-  overflow-y: scroll;
+  overflow: hidden;
+  
 }
 
 .chatList .row:hover{
@@ -35,4 +36,15 @@
 .chatList .row{
   border: 2px solid lightgray;
 }
+
+.chatings{
+  padding: 1%;
+  height:80%; 
+  overflow: hidden;
+  overflow-y: scroll;
+  background-color: aquamarine;
+}
+
+
+
 

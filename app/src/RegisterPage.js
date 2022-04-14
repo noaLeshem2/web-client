@@ -4,30 +4,31 @@ import './RegisterPage.css'
 import logo from "./logo.jpg"
 import * as React from 'react';
 import { useState } from "react";
-import { Button } from 'react-native';
+//import { Button } from 'react-native';
+
 import {Link, Route} from 'react-router-dom'
-import { useNavigate } from 'react-router-dom';
 import userMap from "./usersFolder/usersList";
+import { useNavigate } from "react-router-dom";
 // Already registered? <a href='/' type="button" class="h">Click here</a> to login
 
 function RegisterPage() {
 
     //const navigate = useNavigate();
     //const navigate = useNavigate();
-    
+    let navigate = useNavigate();
     function conditionUserRegi() {
         //const navigate = useNavigate();
-        var username = document.getElementById("username").value;
-        var password = document.getElementById("password").value;
-        var displayName = document.getElementById("displayname").value;
-        username = username.trim();
-        password = password.trim();
-        displayName = displayName.trim();
+        var userName = document.getElementById("username").value;
+        var passWord = document.getElementById("password").value;
+        var display_name = document.getElementById("displayname").value;
+        userName = userName.trim();
+        passWord = passWord.trim();
+        display_name = display_name.trim();
         // if one of the fieald are empty.
-        if (username == "" || password == "" || displayName == "") {
+        if (userName == "" || passWord == "" || display_name == "") {
             alert('Please entar all fields')
             //navigate("/LoginPage");
-            return;
+            //return;
         }
 
         /*
@@ -43,21 +44,24 @@ function RegisterPage() {
         }
         */
 
-        if(userMap.hasOwnProperty(username)){
+        if(userMap.hasOwnProperty(userName)){
             alert('This username is already taken. Please choose another one.')
             return;
         }
-        if (username.length < 4) {
+        if (userName.length < 4) {
             alert('The user name should be longer than four characters.')
             return;
         }
-        if (password.length < 3) {
+        if (passWord.length < 3) {
             alert('The password should be longer than three characters.')
             return;
         }
-
         //mean you can register
-        //users.push({username: username, password: password, displayName: displayName, img: logo, time: "", message: "hi"})
+        userMap[userName] = {
+            password: passWord, displayName: display_name, img: logo,
+            myFriends: {}};
+        
+        navigate("/ChatPage", { state: {username: userName }})
     }
     return (
         <body className="App-header">
