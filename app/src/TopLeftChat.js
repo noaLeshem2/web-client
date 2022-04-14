@@ -1,7 +1,7 @@
-import users from './usersFolder/usersList.js';
+import userMap from './usersFolder/usersList.js';
 import './usersFolder/Users.css';
 function TopLeftChat({username}) {
-    var x= users[1];
+    var x= userMap[username];
     return (
         <>
        

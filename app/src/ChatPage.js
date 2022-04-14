@@ -9,7 +9,7 @@ import userMap from './usersFolder/usersList.js';
 
 function ChatPage({ username }) {
     // the my friends map
-    /*const www = userMap[username].myFriends;
+    const www = userMap[username].myFriends;
     //list of the friends name
     var friendsName = Object.keys(www);
     console.log(friendsName);
@@ -27,8 +27,8 @@ function ChatPage({ username }) {
         var lastTime =  listMessage[listMessage.length -1].time;
         friends.push({ displayName: name, message:last_message, img: myImage, time: lastTime})
     }
-    console.log(friends)*/
-    const userList = users.map((user, key) => {
+    console.log(friends)
+    const userList = friends.map((user, key) => {
         return <User {...user} key={key} />
     });
     console.log(userList);
