@@ -17,7 +17,7 @@ function ChatPage() {
    
     
     const[msgs, setMsgs] = useState([]);
-
+    const[friendTop, setFriendTop] = useState('');
     
     const doChoose = function(userFriend){
         var friendsDic= userMap[username].myFriends;
@@ -25,6 +25,7 @@ function ChatPage() {
         console.log(chatFriend);
         setMsgs(msgs=>chatFriend);
         console.log(msgs);
+        setFriendTop(friendTop=>userFriend);
     }
 
 
@@ -81,7 +82,8 @@ function ChatPage() {
                 <div className="col-9">
                     <div className="messages">
                         <div>
-                            <ChatingWith displayName={"amit"} time={"13:00"} message={"hi"} img={sami} />
+                            <ChatingWith friendTop={friendTop}/>
+                           {/* <ChatingWith displayName={"amit"} time={"13:00"} message={"hi"} img={sami} />*/}
                         </div>
                         <div className="chatings">
                             <MessagesListResult chatFriend={msgs}/>
