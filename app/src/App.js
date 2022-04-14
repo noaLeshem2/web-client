@@ -1,4 +1,5 @@
 import './App.css';
+import Help from './Help';
 import ChatPage from './ChatPage';
 import LoginPage from './LoginPage';
 import RegisterPage from './RegisterPage';

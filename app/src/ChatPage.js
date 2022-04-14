@@ -53,23 +53,21 @@ function ChatPage() {
         <>
             <div className="row chating">
                 <div className="col-3">
-            <div className="box">
-                    
-                    <TopLeftChat username={username}/>
+
+                    <div className="box">
+
+                        <TopLeftChat username={username} />
                     </div>
                     <div className="chatList">
                         {userList}
                     </div>
-
                 </div>
                 <div className="col-9">
                     <div className="messages">
-
                         <div>
-                            <ChatingWith displayName={x.displayName} time={"13:00"} message={"hi"} img={sami} />
+                            <ChatingWith displayName={"amit"} time={"13:00"} message={"hi"} img={sami} />
                         </div>
                         <div className="chatings">
-
                             <Message img={sami} text={"hhhhjhfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww"} time={"15:20"} to={"noa"} mine={"0"} />
                             <Message img={sami} text={"hhhh"} time={"15:20"} to={"noa"} mine={"1"} />
                             <Message img={sami} text={"hhhhjhfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww"} time={"15:20"} to={"noa"} mine={"0"} />
@@ -77,17 +75,10 @@ function ChatPage() {
                             <Message img={sami} text={"hhhhjhfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww"} time={"15:20"} to={"noa"} mine={"1"} />
                             <Message img={sami} text={"hhhh"} time={"15:20"} to={"noa"} mine={"0"} />
                         </div>
-
                     </div>
-
                 </div>
             </div>
-
         </>
-
-
-
-
     );
 }
 
