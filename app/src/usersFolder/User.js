@@ -1,9 +1,13 @@
 import './Users.css';
+import react from 'react';
 
-function User({ displayName, message, img, time }) {
+function User({userFriend, displayName, message, img, time, doChoose }) {
+    const choose = function(){
+       doChoose(userFriend);
+    }
     return (
         <>
-            <a href="#" className="list-group-item list-group-item-action">
+            <a onClick={choose} className="list-group-item list-group-item-action">
                 <div className="row">
                     <div className="col-2 position-relative">
                         <img id="circle" className="position-absolute top-50 start-50 translate-middle" src={img} alt="..."></img>
@@ -17,7 +21,6 @@ function User({ displayName, message, img, time }) {
                     </div>
                 </div>
             </a>
-        
         </>
     );
 }

@@ -1,8 +1,8 @@
 import './messageList';
 import './Message.css';
-function Message({text, time, mine}) {
+function Message({type, text, time, mine}) {
     
-    if (mine === "0") {
+    if (mine) {
         return (
             <>
                 <div class="row message-body">
@@ -20,7 +20,7 @@ function Message({text, time, mine}) {
             </>
         );
     }
-    if (mine === "1") {
+    if (!mine) {
         return (
             <>
                <div class="row message-body">

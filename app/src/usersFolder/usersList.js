@@ -98,7 +98,7 @@ var userMap = {
         }
     },
 
-    tomer50: { username: "tomer50", password: "2020", displayName: "Harel", img: Arthur,
+    tomer50: { username: "tomer50", password: "2020", displayName: "Tomer", img: Arthur,
         myFriends:{
             noale10:[{ type: 1, text: "how you doinnn", time: "10:00", mine: true }]
         }
