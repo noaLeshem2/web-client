@@ -28,17 +28,6 @@ function ChatPage() {
         setFriendTop(friendTop=>userFriend);
     }
 
-
-    /*var usernameFriend = 'noale10';
-    //while we know who was clicked on, we should get his usernameFriend
-    var friendsDic= userMap[username].myFriends;
-    var chatFriend = friendsDic[usernameFriend];
-    
-    const messagesList = chatFriend.map((message, key) => {
-        return <Message {...message} key={key} />
-    });
-    console.log(messagesList);*/
-
     // the my friends map
     const www = userMap[username].myFriends;
     //list of the friends name
@@ -83,11 +72,11 @@ function ChatPage() {
                     <div className="messages">
                         <div>
                             <ChatingWith friendTop={friendTop}/>
-                           {/* <ChatingWith displayName={"amit"} time={"13:00"} message={"hi"} img={sami} />*/}
+                          
                         </div>
                         <div className="chatings">
                             <MessagesListResult chatFriend={msgs}/>
-                            {/*messagesList*/}
+                            
                         </div>
                     </div>
                 </div>
