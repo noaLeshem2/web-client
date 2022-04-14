@@ -15,7 +15,7 @@ function ChatPage() {
 
     /*
     // the my friends map
-    const www = userMap.inbal33.myFriends;
+    const www = userMap[username].myFriends;
     //list of the friends name
     var friendsName = Object.keys(www);
     //let i = friends.length;
