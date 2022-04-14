@@ -1,0 +1,14 @@
+
+.flexbox-container {
+    display: flex;
+    flex-direction: column;
+    display: inline-block;
+}
+
+input[type="text"]{
+   background-color: aliceblue;
+    width: 1%;
+}
+.typing{
+    width: 1%;
+}

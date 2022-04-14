@@ -93,3 +93,9 @@ input{
     background-color:rgb(173, 205, 210) !important;
 }
 
+.btn-lg {
+    width: 27%;
+    font-size:4vh;
+    text-align: center;
+    
+}

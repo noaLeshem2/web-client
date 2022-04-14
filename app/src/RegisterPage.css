@@ -105,4 +105,10 @@ img[type="logo"] {
     width: 2;
 }
 
+.btn-lg {
+    width: 30%;
+    font-size:4vh;
+    text-align: center;
+}
+
 

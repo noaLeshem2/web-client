@@ -45,6 +45,7 @@ function LoginPage() {
 
     }
     return (
+        
         <body className="App-header">
             <div class="head-line">
                 <img src={logo} alt="Logo" type="logo" />
