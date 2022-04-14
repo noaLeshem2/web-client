@@ -13,7 +13,7 @@ function ChatPage() {
     const {state} = useLocation();
     const {username} = state;
 
-    /*
+    
     // the my friends map
     const www = userMap[username].myFriends;
     //list of the friends name
@@ -32,20 +32,11 @@ function ChatPage() {
         var lastTime =  listMessage[listMessage.length -1].time;
         friends.push({ displayName: name, message:last_message, img: myImage, time: lastTime})
     }
-  
-
-
-*/
-
-    //alert(username)
-    console.log(username)
-    
-    var y = userMap.inbal33.myFriends;
-    const userList = users.map((user, key) => {
+    const userList = friends.map((user, key) => {
         return <User {...user} key={key} />
     });
-    
-    var x = users[1];
+
+    console.log(username)
 
 
     return (
