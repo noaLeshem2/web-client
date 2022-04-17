@@ -11,7 +11,11 @@ import {useState} from 'react';
 import MessagesListResult from './MessagesListResult';
 import SendMessage from './SendMessage'
 function ChatPage() {
-    
+
+
+   
+
+
     const {state} = useLocation();
     const {username} = state;
    
@@ -25,6 +29,15 @@ function ChatPage() {
     var friendsName = Object.keys(www); 
     const [userFriends, setUserFriend] = useState(www);
 
+
+     function chageTheState(chatFriend){
+        console.log("hiiiiiiii")
+        //deep clone for rendring
+        var newChatFriend = [...chatFriend];
+        setMsgs(msgs=>newChatFriend);
+        console.log(msgs)
+
+    }
 
     const doChoose = function(userFriend){
         var friendsDic= userMap[username].myFriends;
@@ -95,7 +108,7 @@ function ChatPage() {
 
                     </div>
                     <div className="text-send">
-                            <SendMessage></SendMessage>
+                            <SendMessage myUsername={username} addressee={friendTop} changeTheMsgs={chageTheState}/>
                     </div>
                 </div>
             </div>
