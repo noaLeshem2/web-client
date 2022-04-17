@@ -75,7 +75,7 @@ var userMap = {
         }
     },
     yoval99: {
-        username: "yoval99", password: "09876", displayName: "Amit", img: tituf,
+        username: "yoval99", password: "09876", displayName: "Yoval", img: tituf,
         myFriends: {
             inbal33: [{ type: 1, text: "hii!!!", time: "12:50", mine: false },
                     { type: 1, text: "you are so nice", time: "13:01", mine: true },
@@ -101,6 +101,13 @@ var userMap = {
     tomer50: { username: "tomer50", password: "2020", displayName: "Tomer", img: Arthur,
         myFriends:{
             noale10:[{ type: 1, text: "how you doinnn", time: "10:00", mine: true }]
+        }
+    },
+
+    //fake acount for us
+    fakeOne: { username: "fakeOne", password: "2020", displayName: "Fake", img: Arthur,
+        myFriends:{
+            notReal:[{ type: 1, text: "how you doinnn", time: "10:00", mine: true }]
         }
     }
 };

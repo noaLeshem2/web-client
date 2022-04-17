@@ -1,6 +1,29 @@
 import './SendMessage.css'
-function SendMessage() {
-    function handleSend() { }
+import './ChatPage'
+import ReactDOM from 'react-dom'
+import userMap from './usersFolder/usersList.js';
+import {useState} from 'react';
+function SendMessage({ myUsername, addressee, changeTheMsgs}) {
+
+    const[update, setUpdate] = useState(true);
+    const [val, setVal] = useState();
+
+    function handleSend() { 
+        // the text that we send
+        var textMessage = document.getElementById("text").value;
+        console.log(textMessage)
+        //adding the text message to the two converasions.
+        userMap[myUsername].myFriends[addressee].push({ type: 1, text: textMessage, time: "13:00", mine: true });
+        userMap[addressee].myFriends[myUsername].push({ type: 1, text: textMessage, time: "13:00", mine: false });
+        //changing the messages state
+        var chatFriend = userMap[myUsername].myFriends[addressee];
+        var fakeChat = userMap.fakeOne.myFriends.notReal;
+        //setMsgs(msgs=>fakeChat);
+        changeTheMsgs(chatFriend);
+        //setVal(() => "")
+        document.getElementById("text").value= "";
+        //setUpdate(false);
+    }
     return (
 
         
@@ -13,7 +36,7 @@ function SendMessage() {
 
                 <div class="col-10">
                     <div className="typing">
-                        <input type="text" id="text" placeholder="Enter text here..."></input>
+                        <input type="text" value={val} id="text" placeholder="Enter text here..."></input>
                     </div>
                 </div>
                 <div class="col order-last -2">
@@ -25,5 +48,6 @@ function SendMessage() {
         </>
     );
 }
+
 
 export default SendMessage;

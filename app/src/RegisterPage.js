@@ -83,7 +83,7 @@ function RegisterPage() {
                         Display Name:<input type="name" id="displayname" placeholder="Enter Name"></input>
                     </div>
                     <div>
-                    <p> Already registered? <Link to='/' class="h">Click here</Link> to register</p>
+                    <p> Already registered? <Link to='/' class="h">Click here</Link> to login</p>
                     </div>
                     <div>
                         <button types="button" class="btn btn-lg btn-primary" onClick={() => conditionUserRegi()}>
