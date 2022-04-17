@@ -17,7 +17,7 @@ function ChatPage() {
    
     
     const[msgs, setMsgs] = useState([]);
-
+    const[friendTop, setFriendTop] = useState('');
     
     const doChoose = function(userFriend){
         var friendsDic= userMap[username].myFriends;
@@ -25,18 +25,8 @@ function ChatPage() {
         console.log(chatFriend);
         setMsgs(msgs=>chatFriend);
         console.log(msgs);
+        setFriendTop(friendTop=>userFriend);
     }
-
-
-    /*var usernameFriend = 'noale10';
-    //while we know who was clicked on, we should get his usernameFriend
-    var friendsDic= userMap[username].myFriends;
-    var chatFriend = friendsDic[usernameFriend];
-    
-    const messagesList = chatFriend.map((message, key) => {
-        return <Message {...message} key={key} />
-    });
-    console.log(messagesList);*/
 
     // the my friends map
     const www = userMap[username].myFriends;
@@ -81,11 +71,12 @@ function ChatPage() {
                 <div className="col-9">
                     <div className="messages">
                         <div>
-                            <ChatingWith displayName={"amit"} time={"13:00"} message={"hi"} img={sami} />
+                            <ChatingWith friendTop={friendTop}/>
+                          
                         </div>
                         <div className="chatings">
                             <MessagesListResult chatFriend={msgs}/>
-                            {/*messagesList*/}
+                            
                         </div>
 
                     </div>
