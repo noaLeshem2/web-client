@@ -2,7 +2,7 @@ import userMap from './usersFolder/usersList.js';
 import './usersFolder/Users.css';
 import addPerson from './addPerson.jpeg';
 import { useState } from 'react';
-import Modal from 'react-bootstrap/Modal';
+
 import AddFriend from './AddFriend.js';
 function TopLeftChat({ username, plus }) {
     var x = userMap[username];

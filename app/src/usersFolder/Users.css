@@ -4,15 +4,35 @@
     height: 90%;
     border-radius: 50%;
     background: red;
+    clip-path: circle();
+    font-size:4vh;
 }
 
+.name{
+    font-size: 3.5vh;
+    font-weight: bold;
+}
 a.list-group-item.list-group-item-action{
+
+    background-color: transparent;
     padding:0%;
+}
+a.list-group-item.list-group-item-action:hover{
+
+    background-color: transparent;
+    padding:0%;
+}
+
+.mb-1.message{
+    font-size: 2.5vh;
 }
 .col-10{
     padding:0%;
 }
 
+.time{
+    font-size: 2.5vh;
+}
 .row{
     --bs-gutter-x: none;
 }
@@ -32,3 +52,6 @@ a.list-group-item.list-group-item-action{
     height:6.7%;
 }
 
+.chat-box{
+    background-color: rgb(228, 218, 215);
+}

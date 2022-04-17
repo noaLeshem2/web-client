@@ -30,8 +30,8 @@ function ChatPage() {
     const [userFriends, setUserFriend] = useState(www);
 
 
+    //function for changing the chat state
      function chageTheState(chatFriend){
-        console.log("hiiiiiiii")
         //deep clone for rendring
         var newChatFriend = [...chatFriend];
         setMsgs(msgs=>newChatFriend);
