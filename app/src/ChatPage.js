@@ -10,11 +10,8 @@ import {useLocation} from "react-router-dom";
 import {useState} from 'react';
 import MessagesListResult from './MessagesListResult';
 import SendMessage from './SendMessage'
+
 function ChatPage() {
-
-
-   
-
 
     const {state} = useLocation();
     const {username} = state;
@@ -26,11 +23,11 @@ function ChatPage() {
     // the my friends map
     const www = userMap[username].myFriends;
     //list of the friends name
-    var friendsName = Object.keys(www); 
-    const [userFriends, setUserFriend] = useState(www);
+     
+    const [userFriends, setUserFriends] = useState(userMap);
 
 
-     function chageTheState(chatFriend){
+    function chageTheState(chatFriend){
         console.log("hiiiiiiii")
         //deep clone for rendring
         var newChatFriend = [...chatFriend];
@@ -47,26 +44,22 @@ function ChatPage() {
     }
 
     
-
-    const plus= function(writtenFriend){
-        alert('noce')
-        www[writtenFriend] = [{}];
-        var updateWWW= [...www];
-        setUserFriend(userFriends=>updateWWW);
-        console.log(userFriends);
-        
+   
+    const plus= function(newUserMap){
+        setUserFriends(userFriends=>newUserMap);
     }
-    
+
+    var friendsName = Object.keys(www);
     //let i = friends.length;
     var friends = [];
     for (let i = 0; i < friendsName.length; i++){
         var obj = friendsName[i];
-        var name = userMap[obj].displayName;
+        var name = userFriends[obj].displayName;
         
-        var myImage = userMap[obj].img;
+        var myImage = userFriends[obj].img;
         
         //the list of the chat info
-        var listMessage = userFriends[obj];
+        var listMessage = www[obj];
         if(listMessage === null){
             last_message = "";
             lastTime = "";
@@ -92,6 +85,7 @@ function ChatPage() {
                         <TopLeftChat plus={plus} username={username} />
                     </div>
                     <div className="chatList">
+                        {/*<UserListResults myUsername={username} doChoose={doChoose} friendList={userFriends} plus={plus}/>*/}
                         {userList}
                     </div>
                 </div>
@@ -108,7 +102,7 @@ function ChatPage() {
 
                     </div>
                     <div className="text-send">
-                            <SendMessage myUsername={username} addressee={friendTop} changeTheMsgs={chageTheState}/>
+                            <SendMessage myUsername={username} addressee={friendTop} changeTheMsgs={chageTheState} />
                     </div>
                 </div>
             </div>
