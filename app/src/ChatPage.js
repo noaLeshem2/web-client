@@ -18,20 +18,32 @@ function ChatPage() {
     
     const[msgs, setMsgs] = useState([]);
     const[friendTop, setFriendTop] = useState('');
-    
-    const doChoose = function(userFriend){
-        var friendsDic= userMap[username].myFriends;
-        var chatFriend = friendsDic[userFriend];
-        console.log(chatFriend);
-        setMsgs(msgs=>chatFriend);
-        console.log(msgs);
-        setFriendTop(friendTop=>userFriend);
-    }
 
     // the my friends map
     const www = userMap[username].myFriends;
     //list of the friends name
-    var friendsName = Object.keys(www);
+    var friendsName = Object.keys(www); 
+    const [userFriends, setUserFriend] = useState(www);
+
+
+    const doChoose = function(userFriend){
+        var friendsDic= userMap[username].myFriends;
+        var chatFriend = friendsDic[userFriend];
+        setMsgs(msgs=>chatFriend);
+        setFriendTop(friendTop=>userFriend);
+    }
+
+    
+
+    const plus= function(writtenFriend){
+        alert('noce')
+        www[writtenFriend] = [{}];
+        var updateWWW= [...www];
+        setUserFriend(userFriends=>updateWWW);
+        console.log(userFriends);
+        
+    }
+    
     //let i = friends.length;
     var friends = [];
     for (let i = 0; i < friendsName.length; i++){
@@ -41,9 +53,16 @@ function ChatPage() {
         var myImage = userMap[obj].img;
         
         //the list of the chat info
-        var listMessage = www[obj];
-        var last_message = listMessage[listMessage.length -1].text;
-        var lastTime =  listMessage[listMessage.length -1].time;
+        var listMessage = userFriends[obj];
+        if(listMessage === null){
+            last_message = "";
+            lastTime = "";
+        }
+        else{
+            var last_message = listMessage[listMessage.length -1].text;
+            var lastTime =  listMessage[listMessage.length -1].time;
+        }
+        
         friends.push({userFriend:obj, displayName: name, message:last_message, img: myImage, time: lastTime})
         friends.sort((a, b) => a.time < b.time ? 1 : -1)
     }
@@ -51,18 +70,13 @@ function ChatPage() {
         return <User doChoose={doChoose} {...user} key={key} />
     });
 
-    console.log(username)
-
-
     return (
         
         <>
             <div className="row chating">
                 <div className="col-3">
-
                     <div>
-
-                        <TopLeftChat username={username} />
+                        <TopLeftChat plus={plus} username={username} />
                     </div>
                     <div className="chatList">
                         {userList}

@@ -1,3 +1,28 @@
 .box{
     height:10%;
 }
+.addfriend{
+    position:fixed;
+    top:0;
+    left: 0;
+    width:20%;
+    height:100vh;
+    background-color: (0,0,0,0.2);
+    display: flex;
+    justify-content:left;
+    align-items: center;
+}
+
+.popup-inner{
+    position:relative;
+    padding: 32px;
+    width:100%;
+    max-width: 640px;
+    background-color: aliceblue;
+}
+
+.popup-inner .close-btn{
+    position:absolute;
+    top:16px;
+    right:16px;
+}

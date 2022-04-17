@@ -1,8 +1,40 @@
 import userMap from './usersFolder/usersList.js';
 import './usersFolder/Users.css';
 import addPerson from './addPerson.jpeg';
-function TopLeftChat({ username }) {
+import { useState } from 'react';
+import Modal from 'react-bootstrap/Modal';
+import AddFriend from './AddFriend.js';
+function TopLeftChat({ username, plus }) {
     var x = userMap[username];
+    var y = Object.keys(x.myFriends);
+
+    const [buttonPopup, setButtonPopup] = useState(false);
+
+    const [modalVisible, setModalVisible] = useState(false);
+
+    const plusFriend = function () {
+        var writtenFriend = document.getElementById("writtenFriend").value;
+        if (userMap.hasOwnProperty(writtenFriend)) {
+            if(userMap[username].myFriends.hasOwnProperty(writtenFriend)){
+                alert('already your friend');
+            }
+            else if(writtenFriend === username){
+                alert('you');
+            }
+            else{
+                alert('not your friend')
+                plus(writtenFriend);
+            }
+            
+        }
+
+        else {
+            console.log('bed');
+            alert('bedJ');
+        }
+
+    }
+
     return (
         <>
             <div className="container">
@@ -16,10 +48,21 @@ function TopLeftChat({ username }) {
                         </div>
                     </div>
 
-                    <img src={addPerson} class="col-2"></img>
+                    <img src={addPerson} onClick={() => setButtonPopup(true)} class="col-2"></img>
+
 
                 </div>
             </div>
+
+
+
+            <AddFriend style={StyleSheet.modalContent} trigger={buttonPopup} setTrigger={setButtonPopup}>
+
+                <h1>Add Friend</h1>
+                <input id="writtenFriend" placeholder="Enter friend's username"></input>
+                <button onClick={plusFriend}>Add</button>
+            </AddFriend>
+
         </>
     );
 }

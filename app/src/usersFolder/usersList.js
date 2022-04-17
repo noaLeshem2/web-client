@@ -58,7 +58,7 @@ var userMap = {
                     { type: 1, text: "you are so nice", time: "13:01", mine: false },
                     { type: 1, text: "whats up", time: "17:02", mine: false }],
 
-            harel21: [{ type: 1, text: "macabi", time: "12:50", mine: true }]
+            harel21: [{ type: 1, text: "macabi", time: "12:50", mine: true }],
         }
     },
 
