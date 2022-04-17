@@ -9,7 +9,7 @@ import userMap from './usersFolder/usersList.js';
 import {useLocation} from "react-router-dom";
 import {useState} from 'react';
 import MessagesListResult from './MessagesListResult';
-
+import SendMessage from './SendMessage'
 function ChatPage() {
     
     const {state} = useLocation();
@@ -78,6 +78,10 @@ function ChatPage() {
                             <MessagesListResult chatFriend={msgs}/>
                             
                         </div>
+
+                    </div>
+                    <div className="text-send">
+                            <SendMessage></SendMessage>
                     </div>
                 </div>
             </div>

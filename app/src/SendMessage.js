@@ -1,27 +1,27 @@
-
+import './SendMessage.css'
 function SendMessage() {
     function handleSend() { }
     return (
+
+        
         <>
-<                       div className="text-send">
-                            <SendMessage></SendMessage>
-                        </div>
-            <div className="flexbox-container">
-                <div className="linking">
+            <div class= "hiiii">
+            <div class="row">
+                <div class="col-1">
                     hi
-                </div>
+                    </div>
 
-                <div className="typing">
-                    <input type="text" id="text" placeholder="Enter text here..."></input>
+                <div class="col-10">
+                    <div className="typing">
+                        <input type="text" id="text" placeholder="Enter text here..."></input>
+                    </div>
                 </div>
-
-                <div className="text-right mb-3">
-                    <button types="button" class="btn btn-lg btn-default" onClick={() => handleSend()}>
-                        send
-                    </button>
+                <div class="col order-last -2">
+                    <button type="submit" class="btn btn-default" onClick={() => handleSend()}
+                    >Submit</button>
                 </div>
             </div>
-
+        </div>
         </>
     );
 }
