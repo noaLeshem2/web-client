@@ -11,10 +11,10 @@ function SendMessage({ myUsername, addressee, changeTheMsgs}) {
     function handleSend() { 
         // the text that we send
         var textMessage = document.getElementById("text").value;
-        console.log(textMessage)
+        console.log(userMap);
         //adding the text message to the two converasions.
         userMap[myUsername].myFriends[addressee].push({ type: 1, text: textMessage, time: "13:00", mine: true });
-        userMap[addressee].myFriends[myUsername].push({ type: 1, text: textMessage, time: "13:00", mine: false });
+        //userMap[addressee].myFriends[myUsername].push({ type: 1, text: textMessage, time: "13:00", mine: false });
         //changing the messages state
         var chatFriend = userMap[myUsername].myFriends[addressee];
         var fakeChat = userMap.fakeOne.myFriends.notReal;

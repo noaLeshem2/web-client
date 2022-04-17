@@ -6,35 +6,32 @@ import { useState } from 'react';
 import AddFriend from './AddFriend.js';
 function TopLeftChat({ username, plus }) {
     var x = userMap[username];
-    var y = Object.keys(x.myFriends);
+    var friendMap = x.myFriends;
 
     const [buttonPopup, setButtonPopup] = useState(false);
 
     const [modalVisible, setModalVisible] = useState(false);
 
-    const plusFriend = function () {
+    function plusFriend(){
         var writtenFriend = document.getElementById("writtenFriend").value;
         if (userMap.hasOwnProperty(writtenFriend)) {
-            if(userMap[username].myFriends.hasOwnProperty(writtenFriend)){
-                alert('already your friend');
-            }
-            else if(writtenFriend === username){
-                alert('you');
+            if(userMap[username].myFriends.hasOwnProperty(writtenFriend) || writtenFriend === username){
+                alert('choose another username');
             }
             else{
-                alert('not your friend')
-                plus(writtenFriend);
+               
+                userMap[username].myFriends[writtenFriend] = [{text:''}];
+                var newUserMap = JSON.parse(JSON.stringify(userMap))
+                plus(newUserMap);
+                setButtonPopup(false);
             }
-            
         }
-
         else {
             console.log('bed');
             alert('bedJ');
         }
 
     }
-
     return (
         <>
             <div className="container">
@@ -60,7 +57,7 @@ function TopLeftChat({ username, plus }) {
 
                 <h1>Add Friend</h1>
                 <input id="writtenFriend" placeholder="Enter friend's username"></input>
-                <button onClick={plusFriend}>Add</button>
+                <button onClick={()=>plusFriend()}>Add</button>
             </AddFriend>
 
         </>

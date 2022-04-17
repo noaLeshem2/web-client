@@ -1,7 +1,9 @@
 import './messageList';
 import './Message.css';
 function Message({type, text, time, mine}) {
-    
+    if(text===''){
+     return(<></>);
+    }
     if (mine) {
         return (
             <>
