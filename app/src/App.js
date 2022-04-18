@@ -17,10 +17,6 @@ function App() {
         </Routes>
       </BrowserRouter> 
 
-
-     
-      //<Help username={"inbal33"}></Help>
-
   );
 }
 

@@ -2,25 +2,26 @@ import userMap from './usersFolder/usersList.js';
 import './usersFolder/Users.css';
 import addPerson from './addPerson.jpeg';
 import { useState } from 'react';
+import './TopLeftChat.css';
 
 import AddFriend from './AddFriend.js';
-function TopLeftChat({ username, plus }) {
+function TopLeftChat({ username, plus , setButtonPopup}) {
     var x = userMap[username];
-    var friendMap = x.myFriends;
+    
 
-    const [buttonPopup, setButtonPopup] = useState(false);
+   /* const [buttonPopup, setButtonPopup] = useState(false);
 
     const [modalVisible, setModalVisible] = useState(false);
 
-    function plusFriend(){
+    function plusFriend() {
         var writtenFriend = document.getElementById("writtenFriend").value;
         if (userMap.hasOwnProperty(writtenFriend)) {
-            if(userMap[username].myFriends.hasOwnProperty(writtenFriend) || writtenFriend === username){
+            if (userMap[username].myFriends.hasOwnProperty(writtenFriend) || writtenFriend === username) {
                 alert('choose another username');
             }
-            else{
-               
-                userMap[username].myFriends[writtenFriend] = [{text:''}];
+            else {
+
+                userMap[username].myFriends[writtenFriend] = [{ text: '' }];
                 var newUserMap = JSON.parse(JSON.stringify(userMap))
                 plus(newUserMap);
                 setButtonPopup(false);
@@ -31,7 +32,7 @@ function TopLeftChat({ username, plus }) {
             alert('bedJ');
         }
 
-    }
+    }*/
     return (
         <>
             <div className="container">
@@ -52,13 +53,15 @@ function TopLeftChat({ username, plus }) {
             </div>
 
 
-
-            <AddFriend style={StyleSheet.modalContent} trigger={buttonPopup} setTrigger={setButtonPopup}>
-
+{/*
+            <AddFriend trigger={buttonPopup} setTrigger={setButtonPopup}>
+                <div className="titleCloseBtn">
+                    <button onClick={() => {setButtonPopup(false);}}>X</button>
+                </div>
                 <h1>Add Friend</h1>
                 <input id="writtenFriend" placeholder="Enter friend's username"></input>
-                <button onClick={()=>plusFriend()}>Add</button>
-            </AddFriend>
+                <button onClick={() => plusFriend()}>Add</button>
+    </AddFriend>*/}
 
         </>
     );
