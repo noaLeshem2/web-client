@@ -81,7 +81,7 @@ function ChatPage() {
         <>
             <div className="row chating">
                 <div className="col-3">
-                    <div>
+                    <div className='my-user'>
                         <TopLeftChat plus={plus} username={username} />
                     </div>
                     <div className="chatList">
