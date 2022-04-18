@@ -7,20 +7,29 @@
   position:fixed;
   width: 96%;
   height:90%;
+  overflow: hidden;
+}
+
+.my-user{
+  height:10%;
+  padding: 0;
+  margin: 0;
+  background-color:#B6AAAA;
 }
 
 .chatList {
   width: 100%;
-  height:74.5%;
+  height:90%;
   list-style-type: none;
   float: left;
   overflow: hidden;
   overflow-y: scroll;
+  overflow: hidden;
 }
 
 .messages {
   width:100%;
-  height:74.5%;
+  height:90%;
   float: left;
   background-color: pink;
   overflow: hidden;
@@ -29,7 +38,7 @@
 
 
 .text-send{
-  height: 25.5%;
+  height: 10%;
   position: absolute;
   position: absolute;
   bottom: 0;
@@ -42,10 +51,9 @@
 }
 
 .chatList .row:hover{
-  background-color:lightcyan;
+  background-color: rgb(210, 197, 193);
   cursor: pointer;
-  border-radius: 10px;
-  border: 2px solid rgb(139, 196, 224); 
+  border: 0.3vh solid rgba(163, 170, 174, 0.968); 
 }
 .chatList .row{
   border: 2px solid lightgray;

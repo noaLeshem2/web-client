@@ -1,3 +1,67 @@
 .box{
     height:10%;
 }
+
+.addfriend{
+    position:fixed;
+    top:0;
+    left: 0;
+    
+    height:100%;
+    background-color: (0,0,0,0.2);
+    display: flex;
+    justify-content:left;
+    align-items: center;
+}
+
+/*
+
+.popup-inner{
+    position:relative;
+    padding: 32px;
+    width:100%;
+    max-width: 640px;
+    background-color: aliceblue;
+}
+
+.popup-inner .close-btn{
+    position:absolute;
+    top:16px;
+    right:16px;
+}
+*/
+
+.top{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: stretch;
+}
+
+.row{
+    --bs-gutter-x: none;
+    display: flex;
+}
+
+#circle{
+    width: 90%;
+    height: 90%;
+    border-radius: 50%;
+    background: red;
+    clip-path: circle();
+    font-size:4vh;
+}
+.container{
+    height: 100%;
+}
+
+
+.display-name{
+    text-align: center;
+    font-size: large;
+}
+
+.mb-1.name{
+    font-size: 5vh;
+}
+

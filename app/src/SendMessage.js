@@ -1,5 +1,6 @@
 import './SendMessage.css'
 import './ChatPage'
+import addPerson from './addPerson.jpeg';
 import ReactDOM from 'react-dom'
 import userMap from './usersFolder/usersList.js';
 import {useState} from 'react';
@@ -28,14 +29,14 @@ function SendMessage({ myUsername, addressee, changeTheMsgs}) {
 
         
         <>
-            <div class= "hiiii">
-            <div class="row">
-                <div class="col-1">
-                    hi
+            <div class= "hiiii h-100">
+            <div class="row h-100">
+                <div class="col">
+                <img src={addPerson} onClick={() =>console.log('h')} class="col-2"></img>
                     </div>
 
-                <div class="col-10">
-                    <div className="typing">
+                <div class="col-10 h-100">
+                    <div className="typing h-100">
                         <input type="text" value={val} id="text" placeholder="Enter text here..."></input>
                     </div>
                 </div>
