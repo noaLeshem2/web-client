@@ -1,6 +1,13 @@
 *, ::after, ::before {
   box-sizing:border-box;
 }
+
+/*
+.row.chating{
+  border-radius: 25px;
+}
+*/
+
 .chating{
   border: 2px solid lightgray;
   margin:2%;
@@ -8,48 +15,44 @@
   width: 96%;
   height:90%;
   overflow: hidden;
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
 }
+
+.chating::-webkit-scrollbar { 
+  display: none;  /* Safari and Chrome */
+}
+
 
 .my-user{
-  height:10%;
+  height:12%;
   padding: 0;
   margin: 0;
-  background-color:#B6AAAA;
-}
-
-.chatList {
-  width: 100%;
-  height:90%;
-  list-style-type: none;
-  float: left;
-  overflow: hidden;
-  overflow-y: scroll;
-  overflow: hidden;
-}
-
-.messages {
-  width:100%;
-  height:90%;
-  float: left;
-  background-color: pink;
-  overflow: hidden;
+  /*background-color:#B6AAAA; */
+  background-color: #f1f2f6bd;
+  background-color: rgb(210, 197, 193);
+  border-bottom: 2px solid lightgray;
   
 }
 
 
-.text-send{
-  height: 10%;
-  position: absolute;
-  position: absolute;
-  bottom: 0;
+.chatList {
   width: 100%;
-  border: 3px solid #8AC007;
+  height:90%;
+  background-color:#f1f2f6bd;
+  background-color: rgba(210, 197, 193, 0.785);
+  
+  list-style-type: none;
+  float: left;
+  overflow: hidden;
+  overflow-y: scroll;
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
 }
 
-.col-9{
-  position: relative;
+.chatList::-webkit-scrollbar { 
+  display: none;  /* Safari and Chrome */
 }
-
 .chatList .row:hover{
   background-color: rgb(210, 197, 193);
   cursor: pointer;
@@ -59,13 +62,69 @@
   border: 2px solid lightgray;
 }
 
+.messages {
+  width:100%;
+  height:100%;
+  float: left;
+  background-color: #cfd8d9c8;
+  overflow:auto;
+  padding-bottom:10%;
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+  flex-grow:0 ;
+  
+}
+.messages::-webkit-scrollbar { 
+  display: none;  /* Safari and Chrome */
+}
+
+
+.text-send{
+  height: 10%;
+  position: absolute;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(228, 218, 215);
+  border: 2px solid rgb(228, 218, 215);;
+}
+
+.col-9{
+  position: relative;
+  height: 100%;
+}
+
+
+
+.chating{
+  border: 2px solid lightgray;
+  margin:2%;
+  position:fixed;
+  width: 96%;
+  height:90%;
+  overflow-y: scroll;
+  overflow: hidden;
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.friend-top{
+  position: sticky;
+  top: 0;
+  scroll-padding-top: 0;
+  background-color: #f1f2f6bd;
+  
+}
+
+/*
 .chatings{
   padding: 1%;
-  height:80%; 
-  overflow: hidden;
+  height:100%; 
+  overflow:auto;
   overflow-y: scroll;
   background-color: aquamarine;
 }
+*/
 
 
 

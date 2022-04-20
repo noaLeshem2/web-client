@@ -11,13 +11,13 @@ import { useState } from 'react';
 import MessagesListResult from './MessagesListResult';
 import SendMessage from './SendMessage'
 import AddFriend from './AddFriend';
-
+import React, { useRef } from "react";
 
 function ChatPage() {
 
     const { state } = useLocation();
     const { username } = state;
-
+    const divRef = useRef();
 
     const [msgs, setMsgs] = useState([]);
     const [friendTop, setFriendTop] = useState('');
@@ -28,6 +28,15 @@ function ChatPage() {
 
     const [userFriends, setUserFriends] = useState(userMap);
 
+    /*
+    //scroll down
+    function updateScroll(){
+        //var element = document.getElementById("chatings");
+        //element.scrollTop = element.offsetHeight;
+        var messageBody = document.querySelector('#messages');
+        messageBody.scrollTop = messageBody.scrollHeight - messageBody.clientHeight;
+    }
+    */
 
     //function for changing the chat state
     function chageTheState(chatFriend) {
@@ -35,14 +44,18 @@ function ChatPage() {
         var newChatFriend = [...chatFriend];
         setMsgs(msgs => newChatFriend);
         console.log(msgs)
-
+        updateScroll();
     }
 
+
+    // change the state when click on user
     const doChoose = function (userFriend) {
         var friendsDic = userMap[username].myFriends;
         var chatFriend = friendsDic[userFriend];
         setMsgs(msgs => chatFriend);
         setFriendTop(friendTop => userFriend);
+        updateScroll();
+        //divRef.current.scrollIntoView({ behavior: "smooth" })
     }
 
 
@@ -110,29 +123,29 @@ function ChatPage() {
             <div className="row chating">
                 <div className="col-3">
                     <div className='my-user'>
-                        <TopLeftChat plus={plus} username={username} setButtonPopup={setButtonPopup}/>
+                        <TopLeftChat plus={plus} username={username} setButtonPopup={setButtonPopup} />
                     </div>
                     <div className="chatList">
                         {userList}
                     </div>
                 </div>
                 <div className="col-9">
-                    <div className="messages">
-                        <div>
+                    <div className="messages" id="messages">
+                        <div className='friend-top'>
                             <ChatingWith friendTop={friendTop} />
-
                         </div>
-                        <div className="chatings">
+                        
+                        <div className="chatings" id="chatings">
                             <MessagesListResult chatFriend={msgs} />
-
                         </div>
+                    </div>
 
-                    </div>
-                    <div className="text-send">
-                        <SendMessage myUsername={username} addressee={friendTop} changeTheMsgs={chageTheState} />
-                    </div>
+                        <div className="text-send">
+                            <SendMessage myUsername={username} addressee={friendTop} changeTheMsgs={chageTheState} />
+                        </div>
+                    
                 </div>
-               <AddFriend trigger={buttonPopup} setTrigger={setButtonPopup}>
+                <AddFriend trigger={buttonPopup} setTrigger={setButtonPopup}>
                     <div className="titleCloseBtn">
                         <button onClick={() => { setButtonPopup(false); }}>X</button>
                     </div>
@@ -140,10 +153,10 @@ function ChatPage() {
                     <input id="writtenFriend" placeholder="Enter friend's username"></input>
                     <button className="add-button" onClick={() => plusFriend()}>Add</button>
                 </AddFriend>
-                
+
             </div>
 
-            
+
 
 
         </>

@@ -1,6 +1,18 @@
-.theChat{
-    border: 2px solid lightgray;
 
+
+.container{
+    background-color: rgb(0, 0, 0);
+    background-color: #E5DAD7;
+    background-color: rgb(210, 197, 193);
+    border-left: 2px solid lightgray;
+    border-bottom: 2px solid lightgray;
 }
 
 
+.bi.bi-three-dots-vertical{
+    color: gray;
+    font-size: 6.5vh; 
+    height: 100%;
+    margin-left: auto;
+    cursor: pointer;
+}

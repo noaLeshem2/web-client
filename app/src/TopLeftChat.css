@@ -51,10 +51,18 @@
     clip-path: circle();
     font-size:4vh;
 }
+
+#circle.position-absolute.top-50.start-50.translate-middle {
+    left: 0;
+}
 .container{
     height: 100%;
+    padding: 0;
+    left: 0;
 }
-
+.position-absolute.top-50.start-50.translate-middle {
+    left: 0;
+}
 
 .display-name{
     text-align: center;
@@ -63,5 +71,14 @@
 
 .mb-1.name{
     font-size: 5vh;
+}
+
+
+.bi.bi-person-plus-fill{
+    color: gray;
+    font-size: 6.5vh; 
+    height: 100%;
+    margin-left: auto;
+    cursor: pointer;
 }
 

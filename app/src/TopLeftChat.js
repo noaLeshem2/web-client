@@ -32,21 +32,25 @@ function TopLeftChat({ username, plus , setButtonPopup}) {
             alert('bedJ');
         }
 
-    }*/
+  
+    {<img src={addPerson} onClick={() => setButtonPopup(true)} class="col-2"></img>} 
+ }*/
     return (
         <>
             <div className="container-fluid h-100">
-                <div className="row">
+                <div className="row h-100">
                     <div class="col order-first position-relative">
                         <img id="circle" class="position-absolute top-50 start-50 translate-middle" src={x.img} alt="..."></img>
                     </div>
-                    <div class="col-6">
-                        <div class="d-flex w-100 align-middle">
+                    <div class="col">
+                        
                             <h5 class="mb-1 name">{x.displayName}</h5>
-                        </div>
+                        
                     </div>
-
-                    <img src={addPerson} onClick={() => setButtonPopup(true)} class="col-2"></img>
+                    <div class="col-2">
+                      <i class="bi bi-person-plus-fill " onClick={() => setButtonPopup(true)} ></i>
+                    </div>
+                   
 
 
                 </div>

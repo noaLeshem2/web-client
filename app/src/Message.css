@@ -67,7 +67,9 @@
     display: inline-block;
     
   }
-  
+  .col-sm-12{
+    padding: 1%;
+  }
   .sender {
     float: right;
     max-width: 70%;
@@ -75,12 +77,14 @@
     padding: 1% 1% 1% !important;
     border-radius: 10px 10px 0 10px;
     background-color: rgb(243, 205, 255);
+    background-color: #e8eaef;
     font-size: 10%;
     word-wrap: break-word;
     display: inline-block;
 
   }
-  
+
+
 
   .message-time {
     margin: 0 !important;
