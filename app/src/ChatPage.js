@@ -11,13 +11,13 @@ import { useState } from 'react';
 import MessagesListResult from './MessagesListResult';
 import SendMessage from './SendMessage'
 import AddFriend from './AddFriend';
-import React, { useRef } from "react";
+//import React, { useRef } from "react";
 
 function ChatPage() {
 
     const { state } = useLocation();
     const { username } = state;
-    const divRef = useRef();
+    //const divRef = useRef();
 
     const [msgs, setMsgs] = useState([]);
     const [friendTop, setFriendTop] = useState('');
@@ -44,7 +44,7 @@ function ChatPage() {
         var newChatFriend = [...chatFriend];
         setMsgs(msgs => newChatFriend);
         console.log(msgs)
-        updateScroll();
+        //updateScroll();
     }
 
 
@@ -54,7 +54,7 @@ function ChatPage() {
         var chatFriend = friendsDic[userFriend];
         setMsgs(msgs => chatFriend);
         setFriendTop(friendTop => userFriend);
-        updateScroll();
+        //updateScroll();
         //divRef.current.scrollIntoView({ behavior: "smooth" })
     }
 

@@ -1,11 +1,13 @@
 import Message from "./Message";
-import React, { useEffect, useRef } from 'react'
+//import React, { useEffect, useRef } from 'react'
 function MessagesListResult({ chatFriend }) {
+    /*
     const divRef = useRef(null);
 
      useEffect(() => {
         divRef.current.scrollIntoView({ behavior: 'smooth' });
     });
+    */
 
     if (chatFriend == []) {
         return (<></>);
