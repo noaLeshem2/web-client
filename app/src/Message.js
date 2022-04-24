@@ -54,8 +54,8 @@ function Message({ type, text, time, mine }) {
                     <div class="row message-body">
                         <div class="col-sm-12">
                             <div class="sender">
-                                <div className="message-img">
-                                    <img src= {text}></img>
+                                <div class="message-text">
+                                    {text}
                                 </div>
                                 <span class="message-time pull-right">
                                     {time}
@@ -72,8 +72,8 @@ function Message({ type, text, time, mine }) {
                     <div class="row message-body">
                         <div class="col-sm-12">
                             <div class="sender">
-                                <div class="message-text">
-                                    {text}
+                                <div className="message-img">
+                                    <img src= {text}></img>
                                 </div>
                                 <span class="message-time pull-right">
                                     {time}

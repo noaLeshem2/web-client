@@ -109,16 +109,19 @@ function ChatPage() {
 
         //the list of the chat info
         var listMessage = www[obj];
+        
         if (listMessage === null) {
             last_message = "";
             lastTime = "";
+            last_message_type = '';
         }
         else {
             var last_message = listMessage[listMessage.length - 1].text;
+            var last_message_type = listMessage[listMessage.length - 1].type;
             var lastTime = listMessage[listMessage.length - 1].time;
         }
 
-        friends.push({ userFriend: obj, displayName: name, message: last_message, img: myImage, time: lastTime })
+        friends.push({ userFriend: obj, displayName: name, message: last_message, lastImageType:last_message_type, img: myImage, time: lastTime })
         friends.sort((a, b) => a.time < b.time ? 1 : -1)
     }
     const userList = friends.map((user, key) => {
