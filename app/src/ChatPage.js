@@ -22,8 +22,7 @@ function ChatPage() {
     const [msgs, setMsgs] = useState([]);
     const [friendTop, setFriendTop] = useState('');
 
-    // the my friends map
-    const www = userMap[username].myFriends;
+    
     //list of the friends name
 
     const [userFriends, setUserFriends] = useState(userMap);
@@ -60,10 +59,12 @@ function ChatPage() {
 
 
 
+    //triger for 
     const [buttonPopup, setButtonPopup] = useState(false);
 
     const [modalVisible, setModalVisible] = useState(false);
 
+    //add friend
     function plusFriend() {
         var writtenFriend = document.getElementById("writtenFriend").value;
         if (userMap.hasOwnProperty(writtenFriend)) {
@@ -85,11 +86,18 @@ function ChatPage() {
 
     }
 
+    const [buttonAttach, setButtonAttach] = useState(false);
+    function addAttach(){
+
+    }
+
 
     const plus = function (newUserMap) {
         setUserFriends(userFriends => newUserMap);
     }
 
+    // the my friends map
+    const www = userMap[username].myFriends;
     var friendsName = Object.keys(www);
     //let i = friends.length;
     var friends = [];
