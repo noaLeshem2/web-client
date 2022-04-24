@@ -5,6 +5,7 @@ function User({ userFriend, displayName, message, img, time, doChoose }) {
     const choose = function () {
         doChoose(userFriend);
     }
+    
     return (
         <>
             <a onClick={choose} className="list-group-item list-group-item-action">

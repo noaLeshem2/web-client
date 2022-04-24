@@ -5,14 +5,17 @@ function ChatingWith({myUsername, friendTop, changeTheMsgs}) {
         return (<></>);
     }
 
-    function handleAddFile() {
-        var el = document.getElementById("input-file-id");
+    function handleAddPicture() {
+        var el = document.getElementById("input-image-id");
         var reader = new FileReader();
         var file = el.files[0];
+        //add to the messages
         reader.onload = (e) => {
-
             userMap[myUsername].myFriends[friendTop].push({ type: 2, text: e.target.result, time: "13:00", mine: true });
-            console.log(e.target.result)
+            var chatFriend = userMap[myUsername].myFriends[friendTop];
+            changeTheMsgs(chatFriend);
+            //console.log(userMap[myUsername].myFriends[friendTop])
+            //console.log(e.target.result)
         };
 
         reader.readAsDataURL(file);
@@ -34,10 +37,10 @@ function ChatingWith({myUsername, friendTop, changeTheMsgs}) {
                     </div>
                     <div class="col-3 ">
                         <div className='image-upload'>
-                            <label for="input-file-id">
+                            <label for="input-image-id">
                                 <i class="bi bi-image-fill"></i>
                             </label>
-                            <input class="ng-hide" id="input-file-id" type="file" accept="image/*" onInput={handleAddFile} />
+                            <input class="ng-hide" id="input-image-id" type="file" accept="image/*" onInput={handleAddPicture} />
                         </div>
 
                         <i class="bi bi-geo-alt-fill"></i>
