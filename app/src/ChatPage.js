@@ -141,11 +141,11 @@ function ChatPage() {
                     </div>
                 </div>
                 <div className="col-9">
-                    <div className="messages" id="messages">
+                    
                         <div className='friend-top'>
                             <ChatingWith myUsername={username} friendTop={friendTop} changeTheMsgs={chageTheState} />
                         </div>
-                        
+                        <div className="messages" id="messages">
                         <div className="chatings" id="chatings">
                             <MessagesListResult chatFriend={msgs} />
                         </div>
