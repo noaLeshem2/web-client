@@ -121,7 +121,7 @@ function ChatPage() {
             var lastTime = listMessage[listMessage.length - 1].time;
         }
 
-        friends.push({ userFriend: obj, displayName: name, message: last_message, lastImageType:last_message_type, img: myImage, time: lastTime })
+        friends.push({ userFriend: obj, displayName: name, message: last_message, lastMessageType:last_message_type, img: myImage, time: lastTime })
         friends.sort((a, b) => a.time < b.time ? 1 : -1)
     }
     const userList = friends.map((user, key) => {

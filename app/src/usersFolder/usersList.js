@@ -49,16 +49,16 @@ var userMap = {
     inbal33: {
         username: "inbal33", password: "1020", displayName: "Inbal", img: elsa,
         myFriends: {
-            noale10: [{ type: 1, text: "hiii", time: "10:00", mine: true },
-                    { type: 1, text: "how are you?", time: "10:01", mine: true },
-                    { type: 1, text: "good how are you?", time: "10:02", mine: false }],
+            noale10: [{ type: "text", text: "hiii", time: "10:00", mine: true },
+                    { type: "text", text: "how are you?", time: "10:01", mine: true },
+                    { type: "text", text: "good how are you?", time: "10:02", mine: false }],
 
 
-            yoval99: [{ type: 1, text: "hii!!!", time: "12:50", mine: true },
-                    { type: 1, text: "you are so nice", time: "13:01", mine: false },
-                    { type: 1, text: "whats up", time: "17:02", mine: false }],
+            yoval99: [{ type: "text", text: "hii!!!", time: "12:50", mine: true },
+                    { type: "text", text: "you are so nice", time: "13:01", mine: false },
+                    { type: "text", text: "whats up", time: "17:02", mine: false }],
 
-            harel21: [{ type: 1, text: "macabi", time: "12:50", mine: true }],
+            harel21: [{ type: "text", text: "macabi", time: "12:50", mine: true }],
         }
     },
 
@@ -67,47 +67,47 @@ var userMap = {
     harel21: {
         username: "harel21", password: "0167", displayName: "Harel", img: Arthur,
         myFriends: {
-            yoval99: [{ type: 1, text: "hola", time: "10:00", mine: true },
-                    { type: 1, text: "hijjiij", time: "10:01", mine: false },
-                    { type: 1, text: "???", time: "10:02", mine: true }],
+            yoval99: [{ type: "text", text: "hola", time: "10:00", mine: true },
+                    { type: "text", text: "hijjiij", time: "10:01", mine: false },
+                    { type: "text", text: "???", time: "10:02", mine: true }],
 
-            inbal33: [{ type: 1, text: "macabi", time: "12:50", mine: false }]
+            inbal33: [{ type: "text", text: "macabi", time: "12:50", mine: false }]
         }
     },
     yoval99: {
         username: "yoval99", password: "09876", displayName: "Yoval", img: tituf,
         myFriends: {
-            inbal33: [{ type: 1, text: "hii!!!", time: "12:50", mine: false },
-                    { type: 1, text: "you are so nice", time: "13:01", mine: true },
-                    { type: 1, text: "whats up", time: "17:02", mine: true }],
+            inbal33: [{ type: "text", text: "hii!!!", time: "12:50", mine: false },
+                    { type: "text", text: "you are so nice", time: "13:01", mine: true },
+                    { type: "text", text: "whats up", time: "17:02", mine: true }],
 
-            harel21: [{ type: 1, text: "hola", time: "10:00", mine: false },
-                    { type: 1, text: "hijjiij", time: "10:01", mine: true },
-                    { type: 1, text: "???", time: "10:02", mine: false }]
+            harel21: [{ type: "text", text: "hola", time: "10:00", mine: false },
+                    { type: "text", text: "hijjiij", time: "10:01", mine: true },
+                    { type: "text", text: "???", time: "10:02", mine: false }]
         }
     },
 
     noale10: {
         username: "noale10", password: "454545", displayName: "Noa", img: olaf,
         myFriends: {
-            inbal33: [{ type: 1, text: "hiii", time: "10:00", mine: true },
-                    { type: 1, text: "how are you?", time: "10:01", mine: true },
-                    { type: 1, text: "good how are you?", time: "10:02", mine: false }] ,
+            inbal33: [{ type: "text", text: "hiii", time: "10:00", mine: true },
+                    { type: "text", text: "how are you?", time: "10:01", mine: true },
+                    { type: "text", text: "good how are you?", time: "10:02", mine: false }] ,
 
-            tomer50:[{ type: 1, text: "how you doinnn", time: "10:00", mine: false }]
+            tomer50:[{ type: "text", text: "how you doinnn", time: "10:00", mine: false }]
         }
     },
 
     tomer50: { username: "tomer50", password: "2020", displayName: "Tomer", img: Arthur,
         myFriends:{
-            noale10:[{ type: 1, text: "how you doinnn", time: "10:00", mine: true }]
+            noale10:[{ type: "text", text: "how you doinnn", time: "10:00", mine: true }]
         }
     },
 
     //fake acount for us
     fakeOne: { username: "fakeOne", password: "2020", displayName: "Fake", img: Arthur,
         myFriends:{
-            notReal:[{ type: 1, text: "how you doinnn", time: "10:00", mine: true }]
+            notReal:[{ type: "text", text: "how you doinnn", time: "10:00", mine: true }]
         }
     }
 };

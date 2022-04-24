@@ -6,8 +6,8 @@ function Message({ type, text, time, mine }) {
     }
     
     if (mine) {
-        //text type
-        if (type == 1) {
+        //this is a text type
+        if (type.localeCompare('text') == 0) {
             return (
                 <>
                     <div class="row message-body">
@@ -27,7 +27,7 @@ function Message({ type, text, time, mine }) {
         }
 
         //image type
-        if(type==2){
+        if(type.localeCompare('image') == 0){
             return (
                 <>
                     <div class="row message-body">
@@ -45,12 +45,13 @@ function Message({ type, text, time, mine }) {
                 </>
             );
         }
-        else if(type == 3) {
+        else if(type.localeCompare('audio') == 0) {
             return (<audio controls src={text}></audio>)
         }
     }
+    
     if (!mine) {
-        if (type == 1) {
+        if (type.localeCompare('text') == 0) {
             return (
                 <>
                     <div class="row message-body">
@@ -68,7 +69,8 @@ function Message({ type, text, time, mine }) {
                 </>
             );
         }
-        else if (type==2){
+        // its an image type
+        else if (type.localeCompare('image') == 0){
             return (
                 <>
                     <div class="row message-body">
@@ -86,7 +88,7 @@ function Message({ type, text, time, mine }) {
                 </>
             );
         } 
-        else if(type == 3) {
+        else if(type.localeCompare('audio') == 0) {
             return (<audio controls src={text}></audio>)
         }
     }
