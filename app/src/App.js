@@ -6,7 +6,6 @@ import RegisterPage from './RegisterPage';
 import User from './usersFolder/User';
 import ChatingWith from './ChatingWith';
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-
 function App() {
  
   
@@ -14,17 +13,13 @@ function App() {
   
   return (
     
-    <>
-      
-      {<BrowserRouter>
+      <BrowserRouter>
         <Routes>
           <Route path='/' element={<LoginPage />}/>
           <Route path='/RegisterPage' element={<RegisterPage />}/>
           <Route path='/ChatPage' element={<ChatPage />}> </Route>
         </Routes>
-    </BrowserRouter> }
-
-    </>
+  </BrowserRouter>
   );
 }
 
