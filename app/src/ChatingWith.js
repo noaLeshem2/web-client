@@ -53,13 +53,30 @@ function ChatingWith({ myUsername, friendTop, changeTheMsgs }) {
         return (<></>);
     }
 
-    function handleAddPicture() {
+    function handleAddPicture(type) {
         var el = document.getElementById("input-image-id");
         var reader = new FileReader();
         var file = el.files[0];
         //add to the messages
         reader.onload = (e) => {
             userMap[myUsername].myFriends[friendTop].push({ type: "image", text: e.target.result, time: "13:00", mine: true });
+            var chatFriend = userMap[myUsername].myFriends[friendTop];
+            changeTheMsgs(chatFriend);
+            //console.log(userMap[myUsername].myFriends[friendTop])
+            //console.log(e.target.result)
+        };
+
+        reader.readAsDataURL(file);
+        console.log('jhjhj')
+    }
+
+    function handleAddVideo(){
+        var el = document.getElementById("input-video-id");
+        var reader = new FileReader();
+        var file = el.files[0];
+        //add to the messages
+        reader.onload = (e) => {
+            userMap[myUsername].myFriends[friendTop].push({ type: "video", text: e.target.result, time: "13:00", mine: true });
             var chatFriend = userMap[myUsername].myFriends[friendTop];
             changeTheMsgs(chatFriend);
             //console.log(userMap[myUsername].myFriends[friendTop])
@@ -84,19 +101,22 @@ function ChatingWith({ myUsername, friendTop, changeTheMsgs }) {
                         <small class="col-2">last seen at 13:47</small>
                     </div>
                     <div class="col-3 ">
-                        <div className='image-upload'>
+                        <span className='image-upload'>
                             <label htmlFor="input-image-id">
                                 <i class="bi bi-image-fill"></i>
                             </label>
                             <input class="ng-hide" id="input-image-id" type="file" accept="image/*" onInput={handleAddPicture} />
-                        </div>
+                        </span>
 
                         <i class="bi bi-geo-alt-fill"></i>
-                        <i class="bi bi-mic-fill" onClick={() => setRecMessage(true)}>
-                        </i>
-                        <i class="bi bi-camera-reels-fill"></i>
+                        <i class="bi bi-mic-fill" onClick={() => setRecMessage(true)}></i>
 
-
+                        <span className='video-upload'>
+                            <label htmlFor="input-video-id">
+                                <i class="bi bi-camera-reels-fill"></i>
+                            </label>
+                            <input class="ng-hide" id="input-video-id" type="file" accept="video/*" onInput={handleAddVideo} />
+                        </span>
                     </div>
                 </div>
 

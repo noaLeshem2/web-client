@@ -54,9 +54,28 @@
     cursor: pointer;
     
 }
+.image-upload{
+    width:0vw;
+}
+
+.ng-hide{
+    width: 0;
+}
+
 .image-upload>input {
     display: none;
+    visibility:hidden;
+    width:0;
+    height:0
   }
+  
+  .video-upload>input {
+    display: none;
+    visibility:hidden;
+    width:0;
+    height:0
+  }
+  
 .col-3{
     
 }
