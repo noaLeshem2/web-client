@@ -109,8 +109,8 @@ function ChatPage() {
 
         //the list of the chat info
         var listMessage = www[obj];
-        
-        if (listMessage === null) {
+        console.log(listMessage);
+        if (listMessage[0].text === '' && listMessage.length ==1) {
             last_message = "";
             lastTime = "";
             last_message_type = '';
