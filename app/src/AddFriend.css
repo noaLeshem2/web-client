@@ -3,6 +3,11 @@
   justify-content: flex-end;
 }
 
+.addfriend {
+  display: flex !important;
+  justify-content: center !important;
+  text-align: center;
+}
 .titleCloseBtn button {
   background-color: transparent;
   border: none;

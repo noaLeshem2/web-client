@@ -9,7 +9,8 @@ function ChatingWith({ myUsername, friendTop, changeTheMsgs }) {
     var record = false;
     var recorder;
     function start() {
-        navigator.mediaDevices.getUserMedia({ audio: true })
+        if(!record){
+            navigator.mediaDevices.getUserMedia({ audio: true })
             .then(stream => {
                 recorder = new MediaRecorder(stream);
                 recorder.start();
@@ -36,13 +37,16 @@ function ChatingWith({ myUsername, friendTop, changeTheMsgs }) {
                 });
 
             });
+        }
+        else{
+            stop();
+        }
+        
     }
     function stop() {
-        if (record) {
-            recorder.stop();
-            record = false;
-
-        }
+        recorder.stop();
+        record = false;
+        setRecMessage(false);
     }
 
     if (friendTop == '') {
@@ -122,8 +126,8 @@ function ChatingWith({ myUsername, friendTop, changeTheMsgs }) {
                 <div className="titleCloseBtn">
                     <button onClick={() => { setRecMessage(false); }}>X</button>
                 </div>
+                <i class="bi bi-play-fill" onClick={start}></i>
                 <button onClick={start}>Record</button>
-                <button onClick={stop}>stop</button>
             </Record>
         </>
     );

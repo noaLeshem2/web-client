@@ -46,7 +46,23 @@ function Message({ type, text, time, mine }) {
             );
         }
         else if(type.localeCompare('audio') == 0) {
-            return (<audio controls src={text}></audio>)
+            return (
+                <>
+                <div class="row message-body">
+                      <div class="col-sm-12">
+                          <div class="receiver">
+                              <div className="message-img">
+                              <audio controls src={text}></audio>
+                              </div>
+                              <span class="message-time pull-right">
+                                  {time}
+                              </span>
+                          </div>
+                      </div>
+                  </div>
+          
+          </>
+                );
         }
         //its video type
         if(type.localeCompare('video') == 0){
@@ -112,7 +128,24 @@ function Message({ type, text, time, mine }) {
         } 
         //its audio message
         else if(type.localeCompare('audio') == 0) {
-            return (<audio controls src={text}></audio>)
+            return (
+                <>
+                  <div class="row message-body">
+                        <div class="col-sm-12">
+                            <div class="sender">
+                                <div className="message-img">
+                                <audio controls src={text}></audio>
+                                </div>
+                                <span class="message-time pull-right">
+                                    {time}
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+            
+            </>
+            );
+
         }
         // its an image type
         else if (type.localeCompare('video') == 0){
