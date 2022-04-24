@@ -100,23 +100,28 @@ function ChatingWith({ myUsername, friendTop, changeTheMsgs }) {
                         </div>
                         <small class="col-2">last seen at 13:47</small>
                     </div>
-                    <div class="col-3 ">
+                    <div class="col-3 d-flex" style={{justifyContent: "flex-end", alignItems: "center", paddingRight: "1%"}}>
+                        <div className='row d-flex' style={{width: "60%"}}>
+                            <div className='col-4' style={{justifySelf: "flex-start"}}>
                         <span className='image-upload'>
                             <label htmlFor="input-image-id">
                                 <i class="bi bi-image-fill"></i>
                             </label>
                             <input class="ng-hide" id="input-image-id" type="file" accept="image/*" onInput={handleAddPicture} />
                         </span>
-
-                        <i class="bi bi-geo-alt-fill"></i>
+                        </div>
+                        <div className='col-4'>
                         <i class="bi bi-mic-fill" onClick={() => setRecMessage(true)}></i>
-
+                        </div>
+                        <div className='col-4'>
                         <span className='video-upload'>
                             <label htmlFor="input-video-id">
                                 <i class="bi bi-camera-reels-fill"></i>
                             </label>
                             <input class="ng-hide" id="input-video-id" type="file" accept="video/*" onInput={handleAddVideo} />
                         </span>
+                        </div>
+                    </div>
                     </div>
                 </div>
 
