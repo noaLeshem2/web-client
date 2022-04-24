@@ -14,7 +14,7 @@ function SendMessage({ myUsername, addressee, changeTheMsgs}) {
         var textMessage = document.getElementById("text").value;
         console.log(userMap);
         //adding the text message to the two converasions.
-        userMap[myUsername].myFriends[addressee].push({ type: "text", text: textMessage, time: "13:00", mine: true });
+        userMap[myUsername].myFriends[addressee].push({ type: "text", text: textMessage, time: "23:59", mine: true });
         //userMap[addressee].myFriends[myUsername].push({ type: 1, text: textMessage, time: "13:00", mine: false });
         //changing the messages state
         var chatFriend = userMap[myUsername].myFriends[addressee];

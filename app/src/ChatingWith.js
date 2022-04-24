@@ -131,7 +131,8 @@ function ChatingWith({ myUsername, friendTop, changeTheMsgs }) {
                 <div className="titleCloseBtn">
                     <button onClick={() => { setRecMessage(false); }}>X</button>
                 </div>
-                <i class="bi bi-play-fill" onClick={start}></i>
+                <h5>Record</h5>
+                <i className="bi bi-play-fill" onClick={start}></i>
             </Record>
         </>
     );

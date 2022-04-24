@@ -18,8 +18,8 @@
 
 .inner-rec-mess {
     position: relative;
-    padding: 32px;
-    width: 100%;
+    padding: 15px;
+    width: 20%;
     max-width: 640px;
     background-color: aliceblue;
 }

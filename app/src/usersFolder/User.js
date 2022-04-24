@@ -2,16 +2,19 @@ import './Users.css';
 import react from 'react';
 
 function User({ userFriend, displayName, message,lastMessageType, img, time, doChoose }) {
+
+   
     const choose = function () {
         doChoose(userFriend);
     }
     var lastMs = message;
 
-    
     //last message is image
     if(lastMessageType.localeCompare('image') == 0){
         lastMs = 'img.png '
     }
+
+    
 
     //last message is audio
     if(lastMessageType.localeCompare('audio') == 0){
