@@ -1,11 +1,30 @@
 import './Users.css';
 import react from 'react';
 
-function User({ userFriend, displayName, message, img, time, doChoose }) {
+function User({ userFriend, displayName, message,lastMessageType, img, time, doChoose }) {
     const choose = function () {
         doChoose(userFriend);
     }
+    var lastMs = message;
+
     
+    //last message is image
+    if(lastMessageType.localeCompare('image') == 0){
+        lastMs = 'img.png '
+    }
+
+    //last message is audio
+    if(lastMessageType.localeCompare('audio') == 0){
+        lastMs = 'audio'
+    }
+
+    //last message is audio
+    if(lastMessageType.localeCompare('video') == 0){
+        lastMs = 'video'
+    }
+
+    
+
     return (
         <>
             <a onClick={choose} className="list-group-item list-group-item-action">
@@ -19,7 +38,7 @@ function User({ userFriend, displayName, message, img, time, doChoose }) {
                                 <h5 className="name">{displayName}</h5>
                                 <small className="time">{time}</small>
                             </div>
-                            <p className="mb-1 message">{message}</p>
+                            <p className="mb-1 message">{lastMs}</p>
                         </div>
                     </div>
                 </div>

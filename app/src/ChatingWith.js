@@ -26,7 +26,7 @@ function ChatingWith({ myUsername, friendTop, changeTheMsgs }) {
                     const audioUrl = URL.createObjectURL(audioBlob);
                     // the text that we send
                     //adding the text message to the two converasions.
-                    userMap[myUsername].myFriends[friendTop].push({ type: 3, text: audioUrl, time: "13:00", mine: true });
+                    userMap[myUsername].myFriends[friendTop].push({ type: "audio", text: audioUrl, time: "13:00", mine: true });
                     //userMap[addressee].myFriends[myUsername].push({ type: 1, text: textMessage, time: "13:00", mine: false });
                     //changing the messages state
                     var chatFriend = userMap[myUsername].myFriends[friendTop];
@@ -59,7 +59,7 @@ function ChatingWith({ myUsername, friendTop, changeTheMsgs }) {
         var file = el.files[0];
         //add to the messages
         reader.onload = (e) => {
-            userMap[myUsername].myFriends[friendTop].push({ type: 2, text: e.target.result, time: "13:00", mine: true });
+            userMap[myUsername].myFriends[friendTop].push({ type: "image", text: e.target.result, time: "13:00", mine: true });
             var chatFriend = userMap[myUsername].myFriends[friendTop];
             changeTheMsgs(chatFriend);
             //console.log(userMap[myUsername].myFriends[friendTop])
