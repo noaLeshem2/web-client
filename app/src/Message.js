@@ -46,7 +46,23 @@ function Message({ type, text, time, mine }) {
             );
         }
         else if(type.localeCompare('audio') == 0) {
-            return (<audio controls src={text}></audio>)
+            return (
+                <>
+                <div class="row message-body">
+                      <div class="col-sm-12">
+                          <div class="receiver">
+                              <div className="message-img">
+                              <audio controls src={text}></audio>
+                              </div>
+                              <span class="message-time pull-right">
+                                  {time}
+                              </span>
+                          </div>
+                      </div>
+                  </div>
+          
+          </>
+                );
         }
     }
     
@@ -89,7 +105,24 @@ function Message({ type, text, time, mine }) {
             );
         } 
         else if(type.localeCompare('audio') == 0) {
-            return (<audio controls src={text}></audio>)
+            return (
+                <>
+                  <div class="row message-body">
+                        <div class="col-sm-12">
+                            <div class="sender">
+                                <div className="message-img">
+                                <audio controls src={text}></audio>
+                                </div>
+                                <span class="message-time pull-right">
+                                    {time}
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+            
+            </>
+            );
+
         }
     }
 

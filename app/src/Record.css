@@ -10,32 +10,8 @@
     cursor: pointer;
 }
 
-
-.inner-rec-mess {
-    position: absolute;
-    padding: 32px;
-    width: 100%;
-    max-width: 640px;
-    background-color: aliceblue;
-}
-
 .record-message {
-
-    display: flex;
-    justify-content: center;
-
+    display: flex !important;
+    justify-content: center !important;
+    text-align: center;
 }
-
-.record-message {
-    height: 200px;
-    position: relative;
-    border: 3px solid green;
-  }
-  
-  .inner-rec-mess {
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-  }
