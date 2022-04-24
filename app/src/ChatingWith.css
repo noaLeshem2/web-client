@@ -19,6 +19,47 @@
     right: 1%;
 }
 
+.bi.bi-image-fill{
+    color: gray;
+    font-size: 5vh; 
+    height: 100%;
+    
+    cursor: pointer;
+    
+}
+
+.bi.bi-geo-alt-fill{
+    color: gray;
+    font-size: 5vh; 
+    height: 100%;
+    
+    cursor: pointer;
+    
+}
+
+.bi.bi-mic-fill{
+    color: gray;
+    font-size: 5vh; 
+    height: 100%;
+    
+    cursor: pointer;
+    
+}
+
+.bi.bi-camera-reels-fill{
+    color: gray;
+    font-size: 5vh; 
+    height: 100%;
+    
+    cursor: pointer;
+    
+}
+.image-upload>input {
+    display: none;
+  }
+.col-3{
+    
+}
 .col-2{
     font-size: 3vh;
 }
