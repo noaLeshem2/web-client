@@ -1,27 +1,25 @@
-
-  
-  .titleCloseBtn {
-    display: flex;
-    justify-content: flex-end;
-  }
-  
-  .titleCloseBtn button {
-    background-color: transparent;
-    border: none;
-    font-size: 25px;
-    cursor: pointer;
-  }
-  
-  
-.add-button{
-    background-color: rgb(150, 225, 208);
-    border: none;
-    width: 20%;
-    cursor: pointer;
-    
+.titleCloseBtn {
+  display: flex;
+  justify-content: flex-end;
 }
- 
-  /*
+
+.titleCloseBtn button {
+  background-color: transparent;
+  border: none;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+
+.add-button {
+  background-color: rgb(150, 225, 208);
+  border: none;
+  width: 20%;
+  cursor: pointer;
+
+}
+
+/*
   .popup-inner {
     
     border-radius: 12px;
@@ -33,15 +31,16 @@
     align-items: center;
   }*/
 
-  
-.popup-inner{
-    position:relative;
-    padding: 32px;
-    width:100%;
-    max-width: 640px;
-    background-color: aliceblue;
+
+.popup-inner {
+  position: relative;
+  padding: 32px;
+  width: 100%;
+  max-width: 640px;
+  background-color: aliceblue;
 }
 
-.addfriend{
-  width: 100%;
+.addfriend {
+  display: flex;
+  justify-content: center;
 }

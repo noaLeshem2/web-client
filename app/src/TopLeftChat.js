@@ -50,23 +50,8 @@ function TopLeftChat({ username, plus , setButtonPopup}) {
                     <div class="col-2">
                       <i class="bi bi-person-plus-fill " onClick={() => setButtonPopup(true)} ></i>
                     </div>
-                   
-
-
                 </div>
             </div>
-
-
-{/*
-            <AddFriend trigger={buttonPopup} setTrigger={setButtonPopup}>
-                <div className="titleCloseBtn">
-                    <button onClick={() => {setButtonPopup(false);}}>X</button>
-                </div>
-                <h1>Add Friend</h1>
-                <input id="writtenFriend" placeholder="Enter friend's username"></input>
-                <button onClick={() => plusFriend()}>Add</button>
-    </AddFriend>*/}
-
         </>
     );
 }
