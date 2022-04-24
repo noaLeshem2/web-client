@@ -1,6 +1,50 @@
 import './ChatingWith.css';
 import userMap from './usersFolder/usersList';
-function ChatingWith({myUsername, friendTop, changeTheMsgs}) {
+import Record from './Record';
+import { useState } from 'react';
+
+function ChatingWith({ myUsername, friendTop, changeTheMsgs }) {
+    const [srcOfAudio, setSrcOfAudio] = useState();
+    const [recMessage, setRecMessage] = useState(false)
+    var record = false;
+    var recorder;
+    function start() {
+        navigator.mediaDevices.getUserMedia({ audio: true })
+            .then(stream => {
+                recorder = new MediaRecorder(stream);
+                recorder.start();
+                record = true;
+
+                const audioChunks = [];
+                recorder.addEventListener("dataavailable", event => {
+                    audioChunks.push(event.data);
+                });
+
+                recorder.addEventListener("stop", () => {
+                    const audioBlob = new Blob(audioChunks);
+                    const audioUrl = URL.createObjectURL(audioBlob);
+                    // the text that we send
+                    //adding the text message to the two converasions.
+                    userMap[myUsername].myFriends[friendTop].push({ type: 3, text: audioUrl, time: "13:00", mine: true });
+                    //userMap[addressee].myFriends[myUsername].push({ type: 1, text: textMessage, time: "13:00", mine: false });
+                    //changing the messages state
+                    var chatFriend = userMap[myUsername].myFriends[friendTop];
+                    //setMsgs(msgs=>fakeChat);
+                    changeTheMsgs(chatFriend);
+                    //setVal(() => "")
+                    //setUpdate(false);
+                });
+
+            });
+    }
+    function stop() {
+        if (record) {
+            recorder.stop();
+            record = false;
+
+        }
+    }
+
     if (friendTop == '') {
         return (<></>);
     }
@@ -37,22 +81,30 @@ function ChatingWith({myUsername, friendTop, changeTheMsgs}) {
                     </div>
                     <div class="col-3 ">
                         <div className='image-upload'>
-                            <label for="input-image-id">
+                            <label htmlFor="input-image-id">
                                 <i class="bi bi-image-fill"></i>
                             </label>
                             <input class="ng-hide" id="input-image-id" type="file" accept="image/*" onInput={handleAddPicture} />
                         </div>
 
                         <i class="bi bi-geo-alt-fill"></i>
-                        <i class="bi bi-mic-fill"></i>
+                        <i class="bi bi-mic-fill" onClick={() => setRecMessage(true)}>
+                        </i>
                         <i class="bi bi-camera-reels-fill"></i>
 
 
                     </div>
                 </div>
 
-            </div>
 
+            </div>
+            <Record trigger={recMessage} setRecMessage={setRecMessage}>
+                <div className="titleCloseBtn">
+                    <button onClick={() => { setRecMessage(false); }}>X</button>
+                </div>
+                <button onClick={start}>Record</button>
+                <button onClick={stop}>stop</button>
+            </Record>
         </>
     );
 }

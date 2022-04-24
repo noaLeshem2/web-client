@@ -26,8 +26,6 @@ function SendMessage({ myUsername, addressee, changeTheMsgs}) {
         //setUpdate(false);
     }
     return (
-
-        
         <>
             <div class= "hiiii h-100">
             <div class="row h-100">

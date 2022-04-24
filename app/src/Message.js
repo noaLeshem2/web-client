@@ -44,7 +44,9 @@ function Message({ type, text, time, mine }) {
                     </div>
                 </>
             );
-
+        }
+        else if(type == 3) {
+            return (<audio controls src={text}></audio>)
         }
     }
     if (!mine) {
@@ -66,7 +68,7 @@ function Message({ type, text, time, mine }) {
                 </>
             );
         }
-        if (type==2){
+        else if (type==2){
             return (
                 <>
                     <div class="row message-body">
@@ -83,6 +85,9 @@ function Message({ type, text, time, mine }) {
                     </div>
                 </>
             );
+        } 
+        else if(type == 3) {
+            return (<audio controls src={text}></audio>)
         }
     }
 
