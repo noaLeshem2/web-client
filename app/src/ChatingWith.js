@@ -107,7 +107,6 @@ function ChatingWith({ myUsername, friendTop, changeTheMsgs }) {
                     <button onClick={() => { setRecMessage(false); }}>X</button>
                 </div>
                 <i class="bi bi-play-fill" onClick={start}></i>
-                <button onClick={start}>Record</button>
             </Record>
         </>
     );
