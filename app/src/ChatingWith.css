@@ -6,6 +6,10 @@
     background-color: rgb(210, 197, 193);
     border-left: 2px solid lightgray;
     border-bottom: 2px solid lightgray;
+    color: rgb(73, 134, 148);
+    color:rgb(108, 107, 107);
+    color: rgb(19, 102, 120);
+    
 }
 
 
@@ -19,49 +23,33 @@
     right: 1%;
 }
 
-.bi.bi-image-fill{
-    color: gray;
-    font-size: 5vh; 
-    height: 100%;
-    
-    cursor: pointer;
-    
-}
 
-.bi.bi-geo-alt-fill{
-    color: gray;
-    font-size: 5vh; 
-    height: 100%;
-    
-    cursor: pointer;
-    
-}
+
+
 
 .bi.bi-mic-fill{
-    color: gray;
     font-size: 5vh; 
     height: 100%;
-    
     cursor: pointer;
     
 }
 
 .bi.bi-camera-reels-fill{
-    color: gray;
     font-size: 5vh; 
     height: 100%;
-    
     cursor: pointer;
     
 }
 .image-upload{
-    width:0vw;
+    color: gray;
 }
 
 .ng-hide{
     width: 0;
 }
-
+label{
+    color: gray;
+}
 .image-upload>input {
     display: none;
     visibility:hidden;
@@ -83,4 +71,15 @@
 }
 .col-2{
     font-size: 3vh;
+}
+
+.bi.bi-image-fill{
+    font-size: 5vh; 
+    height: 100%;
+    cursor: pointer;
+    
+}
+
+.row.d-flex{
+    color:gray;
 }

@@ -154,7 +154,7 @@ function Message({ type, text, time, mine }) {
                     <div class="row message-body">
                         <div class="col-sm-12">
                             <div class="sender">
-                                <div className="message-img">
+                                <div className="message-video">
                                     <video controls src= {text}></video>
                                 </div>
                                 <span class="message-time pull-right">

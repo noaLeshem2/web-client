@@ -12,6 +12,9 @@ function SendMessage({ myUsername, addressee, changeTheMsgs}) {
     function handleSend() { 
         // the text that we send
         var textMessage = document.getElementById("text").value;
+        if(textMessage==""){
+            return;
+        }
         console.log(userMap);
         //adding the text message to the two converasions.
         userMap[myUsername].myFriends[addressee].push({ type: "text", text: textMessage, time: "23:59", mine: true });

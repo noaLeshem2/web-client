@@ -53,6 +53,9 @@ function ChatPage() {
         var chatFriend = friendsDic[userFriend];
         setMsgs(msgs => chatFriend);
         setFriendTop(friendTop => userFriend);
+        //var objDiv = document.getElementById("your_div");
+        //objDiv.scrollTop = objDiv.scrollHeight;
+        
         //updateScroll();
         //divRef.current.scrollIntoView({ behavior: "smooth" })
     }

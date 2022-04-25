@@ -41,6 +41,8 @@
 .row{
     --bs-gutter-x: none;
     display: flex;
+    color:rgb(108, 107, 107);
+    color: rgb(19, 102, 120);
 }
 
 #circle{
