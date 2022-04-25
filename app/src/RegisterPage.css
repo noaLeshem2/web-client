@@ -13,7 +13,7 @@ body{
     background-image: url("background-resize.jpg");
 }
 
-.fooo{
+.regis{
     background-color: rgb(240, 226, 225, 0.8);
     border-color: transparent;
     position:relative;
@@ -27,6 +27,7 @@ body{
     padding-right: 5vh;
     vertical-align: center;
     border-radius: 25px;
+    font-size: 3.2vh !important;
     color: rgb(73, 134, 148);
 }
 
@@ -54,7 +55,7 @@ row.justify-content-md-center{
 }
 
 img[type="logo"] {
-   max-height: 20vh;
+   max-height: 18.7vh;
   }
 
 
@@ -70,6 +71,7 @@ img[type="logo"] {
     background-color: rgb(240, 226, 225, 0.9);
     background-color: rgb(173, 205, 210,0.5);
     border-color: #ccc;
+    height: 6vh !important;
     width: 90%;
     padding: 1% 2%;
     margin: 1% 0;
@@ -116,7 +118,7 @@ p{
     color: rgb(152, 188, 194);
 }
 .bi.bi-image{
-    font-size: 5vh; 
+    font-size: 4vh; 
     height: 100%;
     cursor: pointer;
     color: rgb(152, 188, 194);

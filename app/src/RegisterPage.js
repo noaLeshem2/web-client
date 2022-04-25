@@ -31,42 +31,40 @@ function RegisterPage() {
         //const navigate = useNavigate();
         var userName = document.getElementById("username").value;
         var passWord = document.getElementById("password").value;
+        var confPassword = document.getElementById("conf-password").value;
         var display_name = document.getElementById("displayname").value;
+        
         userName = userName.trim();
         passWord = passWord.trim();
         display_name = display_name.trim();
+        confPassword = confPassword.trim();
         // if one of the fieald are empty.
-        if (userName == "" || passWord == "" || display_name == "") {
+        if (userName == "" || passWord == "" || display_name == "" || confPassword == "") {
             alert('Please entar all fields')
-            //navigate("/LoginPage");
-            //return;
         }
 
-        /*
-        let len = users.length;
-        //cheack if username existed
-        
-        for (let i = 0; i < len; i++) {
-
-            if (users[i].username.localeCompare(username) == 0) {
-                alert('This username is already taken. Please choose another one.')
-                return;
-            }
+        //cofirm password 
+        if(confPassword.localeCompare(passWord) != 0){
+            alert('The two passwords are not identical.')
+            return;
         }
-        */
-
+       //if the user taken
         if(userMap.hasOwnProperty(userName)){
             alert('This username is already taken. Please choose another one.')
             return;
         }
+        //if the username is invalid
         if (userName.length < 4) {
             alert('The user name should be longer than four characters.')
             return;
         }
+        //if the password is invalid
         if (passWord.length < 3) {
             alert('The password should be longer than three characters.')
             return;
         }
+        
+
         //mean you can register
         userMap[userName] = {
             password: passWord, displayName: display_name, img: logo,
@@ -80,7 +78,7 @@ function RegisterPage() {
                 <img src={logo} alt="Logo" type="logo" />
             </div>
             <div className="row justify-content-md-center">
-                <div className="fooo">
+                <div className="regis">
                     <div className="loggg">
                         Register
                     </div>
@@ -89,6 +87,9 @@ function RegisterPage() {
                     </div>
                     <div>
                         Password:<input type="password" id="password" placeholder="Enter Password"></input>
+                    </div>
+                    <div>
+                        Confirm Password:<input type="password" id="conf-password" placeholder="Enter Password"></input>
                     </div>
                     <div>
                         Display Name:<input type="name" id="displayname" placeholder="Enter Name"></input>

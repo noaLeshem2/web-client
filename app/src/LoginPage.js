@@ -48,7 +48,7 @@ function LoginPage() {
         
         <body className="App-header">
             <div className="head-line">
-                <img src={logo} alt="Logo" type="logo" />
+                <img src={logo} alt="Logo" type="logoBig" />
             </div>
             <div className="row justify-content-md-center">
                 <div className="fooo">
