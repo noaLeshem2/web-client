@@ -62,12 +62,11 @@ function ChatingWith({ myUsername, friendTop, changeTheMsgs }) {
             userMap[myUsername].myFriends[friendTop].push({ type: "image", text: e.target.result, time: "13:00", mine: true });
             var chatFriend = userMap[myUsername].myFriends[friendTop];
             changeTheMsgs(chatFriend);
-            //console.log(userMap[myUsername].myFriends[friendTop])
-            //console.log(e.target.result)
+        
         };
 
         reader.readAsDataURL(file);
-        console.log('jhjhj')
+       
     }
 
     function handleAddVideo() {
@@ -79,12 +78,11 @@ function ChatingWith({ myUsername, friendTop, changeTheMsgs }) {
             userMap[myUsername].myFriends[friendTop].push({ type: "video", text: e.target.result, time: "13:00", mine: true });
             var chatFriend = userMap[myUsername].myFriends[friendTop];
             changeTheMsgs(chatFriend);
-            //console.log(userMap[myUsername].myFriends[friendTop])
-            //console.log(e.target.result)
+           
         };
 
         reader.readAsDataURL(file);
-        console.log('jhjhj')
+       
     }
 
     return (

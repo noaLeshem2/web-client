@@ -66,7 +66,6 @@ function Message({ type, text, time, mine }) {
         }
         //its video type
         if(type.localeCompare('video') == 0){
-            console.log("videoooooooo")
             return (
                 <>
                     <div className="row message-body">
