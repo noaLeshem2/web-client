@@ -9,32 +9,6 @@ function TopLeftChat({ username, plus , setButtonPopup}) {
     var x = userMap[username];
     
 
-   /* const [buttonPopup, setButtonPopup] = useState(false);
-
-    const [modalVisible, setModalVisible] = useState(false);
-
-    function plusFriend() {
-        var writtenFriend = document.getElementById("writtenFriend").value;
-        if (userMap.hasOwnProperty(writtenFriend)) {
-            if (userMap[username].myFriends.hasOwnProperty(writtenFriend) || writtenFriend === username) {
-                alert('choose another username');
-            }
-            else {
-
-                userMap[username].myFriends[writtenFriend] = [{ text: '' }];
-                var newUserMap = JSON.parse(JSON.stringify(userMap))
-                plus(newUserMap);
-                setButtonPopup(false);
-            }
-        }
-        else {
-            console.log('bed');
-            alert('bedJ');
-        }
-
-  
-    {<img src={addPerson} onClick={() => setButtonPopup(true)} className="col-2"></img>} 
- }*/
     return (
         <>
             <div className="container-fluid h-100">

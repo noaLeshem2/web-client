@@ -52,6 +52,7 @@ function Message({ type, text, time, mine }) {
                       <div className="col-sm-12">
                           <div className="receiver">
                               <div className="message-img">
+                            
                               <audio controls src={text}></audio>
                               </div>
                               <span className="message-time pull-right">

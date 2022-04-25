@@ -87,11 +87,6 @@ function ChatPage() {
 
     }
 
-    const [buttonAttach, setButtonAttach] = useState(false);
-    function addAttach(){
-
-    }
-
 
     const plus = function (newUserMap) {
         setUserFriends(userFriends => newUserMap);
