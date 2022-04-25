@@ -16,3 +16,9 @@ When you enter the chat, all the conversations with other users will appear.
 Of course if you registered then you will not see any existing conversations.
 You can click on any possible user and contact with him. you can according to the appropriate icons send the desired data.
 You also can add new conversation with one of the existing users. 
+## How to run the project?
+In the app directory you need to run the folowing command -
+
+```bash
+npm start
+```
