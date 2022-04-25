@@ -2,6 +2,7 @@
 //import users from "./usersFolder/usersList";
 import './RegisterPage.css'
 import logo from "./logo.jpg"
+import profile from "./usersFolder/profile/profile8.jpg"
 import * as React from 'react';
 import { useState } from "react";
 //import { Button } from 'react-native';
@@ -23,7 +24,7 @@ function RegisterPage() {
         var file = el.files[0];
         //add to the messages
         reader.onload = (e) => {
-            logo = e.target.result
+            profile = e.target.result
         };
         reader.readAsDataURL(file);
     }
@@ -67,7 +68,7 @@ function RegisterPage() {
 
         //mean you can register
         userMap[userName] = {
-            password: passWord, displayName: display_name, img: logo,
+            password: passWord, displayName: display_name, img: profile,
             myFriends: {}};
         
         navigate("/ChatPage", { state: {username: userName }})
