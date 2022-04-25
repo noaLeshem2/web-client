@@ -16,6 +16,17 @@ function RegisterPage() {
     //const navigate = useNavigate();
     //const navigate = useNavigate();
     let navigate = useNavigate();
+
+    function handleAddPicture() {
+        var el = document.getElementById("input-image-id");
+        var reader = new FileReader();
+        var file = el.files[0];
+        //add to the messages
+        reader.onload = (e) => {
+            logo = e.target.result
+        };
+        reader.readAsDataURL(file);
+    }
     function conditionUserRegi() {
         //const navigate = useNavigate();
         var userName = document.getElementById("username").value;
@@ -82,9 +93,20 @@ function RegisterPage() {
                     <div>
                         Display Name:<input type="name" id="displayname" placeholder="Enter Name"></input>
                     </div>
-                    <div>
+
+                     <div>
+                    <p> Add profile picture <span className='image-upload'>
+                            <label htmlFor="input-image-id">
+                                <i class="bi bi-image-fill"></i>
+                            </label>
+                            <input class="ng-hide" id="input-image-id" type="file" accept="image/*" onInput={handleAddPicture} />
+                        </span></p>
+                    </div>
+
+                    <div className='regi'>
                     <p> Already registered? <Link to='/' class="h">Click here</Link> to login</p>
                     </div>
+                   
                     <div>
                         <button types="button" class="btn btn-lg btn-primary" onClick={() => conditionUserRegi()}>
                             Register

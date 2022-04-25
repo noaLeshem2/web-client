@@ -65,6 +65,7 @@
     font-size: 10%;
     word-wrap: break-word;
     display: inline-block;
+    color: black;
     
   }
   .col-sm-12{
@@ -81,11 +82,16 @@
     font-size: 10%;
     word-wrap: break-word;
     display: inline-block;
+    color: black;
 
   }
 
 img{
-  max-width:20vw !important;
+  max-width:30vw !important;
+}
+
+video{
+  max-width:30vw !important;
 }
 
   .message-time {

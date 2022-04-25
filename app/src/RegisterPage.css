@@ -54,7 +54,7 @@ row.justify-content-md-center{
 }
 
 img[type="logo"] {
-   max-height: 22vh;
+   max-height: 20vh;
   }
 
 
@@ -104,6 +104,18 @@ img[type="logo"] {
 .button{
     width: 2;
 }
+p{
+    padding: 0;
+    margin: 0;
+}
+
+.regi{
+    padding-bottom: 1vh;
+}
+.span.image-upload{
+    color: rgb(152, 188, 194);
+}
+
 
 .btn-lg {
     width: 30%;
