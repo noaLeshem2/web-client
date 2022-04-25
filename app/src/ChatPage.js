@@ -42,7 +42,6 @@ function ChatPage() {
         //deep clone for rendring
         var newChatFriend = [...chatFriend];
         setMsgs(msgs => newChatFriend);
-        console.log(msgs)
         //updateScroll();
     }
 
@@ -53,13 +52,7 @@ function ChatPage() {
         var chatFriend = friendsDic[userFriend];
         setMsgs(msgs => chatFriend);
         setFriendTop(friendTop => userFriend);
-<<<<<<< HEAD
         setSendPopup(true);
-=======
-        //var objDiv = document.getElementById("your_div");
-        //objDiv.scrollTop = objDiv.scrollHeight;
-        
->>>>>>> 216ca8102ae669a050d057030d3da73c6d7611e4
         //updateScroll();
         //divRef.current.scrollIntoView({ behavior: "smooth" })
     }
@@ -117,7 +110,6 @@ function ChatPage() {
 
         //the list of the chat info
         var listMessage = www[obj];
-        console.log(listMessage);
         if (listMessage[0].text === '' && listMessage.length ==1) {
             last_message = "";
             lastTime = "";
@@ -148,7 +140,7 @@ function ChatPage() {
                         {userList}
                     </div>
                 </div>
-                <div className="col-9">
+                <div className="col-9 right-side">
                     
                         <div className='friend-top'>
                             <ChatingWith myUsername={username} friendTop={friendTop} changeTheMsgs={chageTheState} />

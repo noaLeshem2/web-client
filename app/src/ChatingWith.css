@@ -83,3 +83,11 @@ label{
 .row.d-flex{
     color:gray;
 }
+
+.bi-play-fill{
+    font-size: 300%;
+}
+
+.bi-stop-fill{
+    font-size: 300%;
+}

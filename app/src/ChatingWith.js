@@ -124,8 +124,6 @@ function ChatingWith({ myUsername, friendTop, changeTheMsgs }) {
                         </div>
                     </div>
                 </div>
-
-
             </div>
             <Record trigger={recMessage} setRecMessage={setRecMessage}>
                 <div className="titleCloseBtn">
