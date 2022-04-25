@@ -53,6 +53,7 @@ function ChatPage() {
         var chatFriend = friendsDic[userFriend];
         setMsgs(msgs => chatFriend);
         setFriendTop(friendTop => userFriend);
+        setSendPopup(true);
         //updateScroll();
         //divRef.current.scrollIntoView({ behavior: "smooth" })
     }
@@ -61,6 +62,7 @@ function ChatPage() {
 
     //triger for 
     const [buttonPopup, setButtonPopup] = useState(false);
+    const [sendPopup, setSendPopup] = useState(false);
 
     const [modalVisible, setModalVisible] = useState(false);
 
@@ -151,8 +153,8 @@ function ChatPage() {
                         </div>
                     </div>
 
-                        <div className="text-send">
-                            <SendMessage myUsername={username} addressee={friendTop} changeTheMsgs={chageTheState} />
+                        <div>
+                            <SendMessage trigger={sendPopup} myUsername={username} addressee={friendTop} changeTheMsgs={chageTheState} />
                         </div>
                     
                 </div>

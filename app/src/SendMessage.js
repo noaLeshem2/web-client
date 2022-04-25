@@ -4,7 +4,7 @@ import attach from './attach.jpg';
 import ReactDOM from 'react-dom'
 import userMap from './usersFolder/usersList.js';
 import { useState } from 'react';
-function SendMessage({ myUsername, addressee, changeTheMsgs }) {
+function SendMessage({trigger, myUsername, addressee, changeTheMsgs }) {
 
     const [update, setUpdate] = useState(true);
     const [val, setVal] = useState();
@@ -27,8 +27,9 @@ function SendMessage({ myUsername, addressee, changeTheMsgs }) {
         document.getElementById("text").value = "";
         //setUpdate(false);
     }
-    return (
+    return (trigger) ? (
         <>
+        <div className="text-send">
             <div class="hiiii h-100">
                 <div class="row h-100">
                     <div class="col-10 h-100">
@@ -42,8 +43,9 @@ function SendMessage({ myUsername, addressee, changeTheMsgs }) {
                     </div>
                 </div>
             </div>
+            </div>
         </>
-    );
+    ):<></>;
 }
 
 
