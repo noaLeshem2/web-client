@@ -23,6 +23,7 @@
     padding-right: 5vh;
     vertical-align: center;
     border-radius: 25px;
+    font-size: 3.8vh !important;
     color: rgb(73, 134, 148);
 }
 
@@ -34,8 +35,8 @@
     color: rgb(73, 134, 148);
 
 }
-img[type="logo"] {
-    max-height: 25vh;
+img[type="logoBig"] {
+    max-height: 23vh;
     padding-bottom: 1.5vh;
   }
 
@@ -64,12 +65,12 @@ input{
     background-color: rgb(173, 205, 210,0.5);
     border-color: #ccc;
     width: 90%;
+    height: 7vh !important;
     padding: 1% 2%;
     margin: 1% 0;
     display: inline-block;
     border: 1% solid #ccc;
     box-sizing: border-box;
-    
 }
 
 .h {

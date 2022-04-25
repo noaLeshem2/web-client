@@ -12,7 +12,9 @@ function SendMessage({trigger, myUsername, addressee, changeTheMsgs }) {
     function handleSend() {
         // the text that we send
         var textMessage = document.getElementById("text").value;
+        textMessage = textMessage.trim();
         if(textMessage==""){
+            document.getElementById("text").value = "";
             return;
         }
         console.log(userMap);
