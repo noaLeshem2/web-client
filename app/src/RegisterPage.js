@@ -95,9 +95,9 @@ function RegisterPage() {
                     </div>
 
                      <div>
-                    <p> Add profile picture <span className='image-upload'>
+                    <p> Add profile picture <span className='image-uploading'>
                             <label htmlFor="input-image-id">
-                                <i class="bi bi-image-fill"></i>
+                                <i class="bi bi-image"></i>
                             </label>
                             <input class="ng-hide" id="input-image-id" type="file" accept="image/*" onInput={handleAddPicture} />
                         </span></p>
