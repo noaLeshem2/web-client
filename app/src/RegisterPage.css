@@ -112,10 +112,23 @@ p{
 .regi{
     padding-bottom: 1vh;
 }
-.span.image-upload{
+.image-uploading{
     color: rgb(152, 188, 194);
 }
-
+.bi.bi-image{
+    font-size: 5vh; 
+    height: 100%;
+    cursor: pointer;
+    color: rgb(152, 188, 194);
+    
+}
+.image-uploading>input {
+    display: none;
+    visibility:hidden;
+    width:0;
+    height:0;
+    color: rgb(152, 188, 194);
+  }
 
 .btn-lg {
     width: 30%;

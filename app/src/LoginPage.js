@@ -47,12 +47,12 @@ function LoginPage() {
     return (
         
         <body className="App-header">
-            <div class="head-line">
+            <div className="head-line">
                 <img src={logo} alt="Logo" type="logo" />
             </div>
-            <div class="row justify-content-md-center">
-                <div class="fooo">
-                    <div class="loggg">
+            <div className="row justify-content-md-center">
+                <div className="fooo">
+                    <div className="loggg">
                         Login
                     </div>
                     <div>
@@ -61,11 +61,11 @@ function LoginPage() {
                     <div>
                         Password:<input type="password" id="password" placeholder="Enter Password"></input>
                     </div>
-                    <div class="registering">
-                        <p> Not registered? <Link to='/RegisterPage' class="h">Click here</Link> to register</p>
+                    <div className="registering">
+                        <p> Not registered? <Link to='/RegisterPage' className="h">Click here</Link> to register</p>
                     </div>
                     <div>
-                        <button types="button" class="btn btn-lg btn-primary" onClick={() => conditionUser()}>
+                        <button types="button" className="btn btn-lg btn-primary" onClick={() => conditionUser()}>
                             Login
                         </button>
                     </div>

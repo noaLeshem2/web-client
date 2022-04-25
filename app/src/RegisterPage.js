@@ -9,7 +9,7 @@ import { useState } from "react";
 import {Link, Route} from 'react-router-dom'
 import userMap from "./usersFolder/usersList";
 import { useNavigate } from "react-router-dom";
-// Already registered? <a href='/' type="button" class="h">Click here</a> to login
+// Already registered? <a href='/' type="button" className="h">Click here</a> to login
 
 function RegisterPage() {
 
@@ -76,12 +76,12 @@ function RegisterPage() {
     }
     return (
         <body className="App-header">
-            <div class="head-line">
+            <div className="head-line">
                 <img src={logo} alt="Logo" type="logo" />
             </div>
-            <div class="row justify-content-md-center">
-                <div class="fooo">
-                    <div class="loggg">
+            <div className="row justify-content-md-center">
+                <div className="fooo">
+                    <div className="loggg">
                         Register
                     </div>
                     <div>
@@ -95,20 +95,20 @@ function RegisterPage() {
                     </div>
 
                      <div>
-                    <p> Add profile picture <span className='image-upload'>
+                    <p> Add profile picture <span className='image-uploading'>
                             <label htmlFor="input-image-id">
-                                <i class="bi bi-image-fill"></i>
+                                <i className="bi bi-image"></i>
                             </label>
-                            <input class="ng-hide" id="input-image-id" type="file" accept="image/*" onInput={handleAddPicture} />
+                            <input className="ng-hide" id="input-image-id" type="file" accept="image/*" onInput={handleAddPicture} />
                         </span></p>
                     </div>
 
                     <div className='regi'>
-                    <p> Already registered? <Link to='/' class="h">Click here</Link> to login</p>
+                    <p> Already registered? <Link to='/' className="h">Click here</Link> to login</p>
                     </div>
                    
                     <div>
-                        <button types="button" class="btn btn-lg btn-primary" onClick={() => conditionUserRegi()}>
+                        <button types="button" className="btn btn-lg btn-primary" onClick={() => conditionUserRegi()}>
                             Register
                         </button>
                     </div>
