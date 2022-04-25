@@ -8,20 +8,8 @@
 }
 */
 
-.chating{
-  border: 2px solid lightgray;
-  margin:2%;
-  position:fixed;
-  width: 96%;
-  height:90%;
-  overflow: hidden;
-  -ms-overflow-style: none;  /* Internet Explorer 10+ */
-  scrollbar-width: none;  /* Firefox */
-}
 
-.chating::-webkit-scrollbar { 
-  display: none;  /* Safari and Chrome */
-}
+
 
 
 .my-user{
@@ -117,6 +105,7 @@
   -ms-overflow-style: none;  /* Internet Explorer 10+ */
   scrollbar-width: none;  /* Firefox */
 }
+
 
 .friend-top{
   position: sticky;

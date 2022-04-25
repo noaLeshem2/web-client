@@ -3,13 +3,13 @@ import './ChatPage'
 import attach from './attach.jpg';
 import ReactDOM from 'react-dom'
 import userMap from './usersFolder/usersList.js';
-import {useState} from 'react';
-function SendMessage({ myUsername, addressee, changeTheMsgs}) {
+import { useState } from 'react';
+function SendMessage({ myUsername, addressee, changeTheMsgs }) {
 
-    const[update, setUpdate] = useState(true);
+    const [update, setUpdate] = useState(true);
     const [val, setVal] = useState();
 
-    function handleSend() { 
+    function handleSend() {
         // the text that we send
         var textMessage = document.getElementById("text").value;
         if(textMessage==""){
@@ -17,7 +17,9 @@ function SendMessage({ myUsername, addressee, changeTheMsgs}) {
         }
         console.log(userMap);
         //adding the text message to the two converasions.
-        userMap[myUsername].myFriends[addressee].push({ type: "text", text: textMessage, time: "23:59", mine: true });
+        var today = new Date();
+        var time = today.getHours() + ":" + today.getMinutes();
+        userMap[myUsername].myFriends[addressee].push({ type: "text", text: textMessage, time: time, mine: true });
         //userMap[addressee].myFriends[myUsername].push({ type: 1, text: textMessage, time: "13:00", mine: false });
         //changing the messages state
         var chatFriend = userMap[myUsername].myFriends[addressee];
@@ -25,24 +27,24 @@ function SendMessage({ myUsername, addressee, changeTheMsgs}) {
         //setMsgs(msgs=>fakeChat);
         changeTheMsgs(chatFriend);
         //setVal(() => "")
-        document.getElementById("text").value= "";
+        document.getElementById("text").value = "";
         //setUpdate(false);
     }
     return (
         <>
-            <div class= "hiiii h-100">
-            <div class="row h-100">
-                <div class="col-10 h-100">
-                    <div className="typing h-100">
-                        <input type="text" value={val} id="text" placeholder="Enter text here..."></input>
+            <div class="hiiii h-100">
+                <div class="row h-100">
+                    <div class="col-10 h-100">
+                        <div className="typing h-100">
+                            <input type="text" value={val} id="text" placeholder="Enter text here..."></input>
+                        </div>
+                    </div>
+                    <div class="col order-last">
+                        <button type="submit" class="btn btn-success" onClick={() => handleSend()}
+                        >Send</button>
                     </div>
                 </div>
-                <div class="col order-last">
-                    <button type="submit" class="btn btn-success" onClick={() => handleSend()}
-                    >Send</button>
-                </div>
             </div>
-        </div>
         </>
     );
 }
