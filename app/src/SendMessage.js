@@ -33,15 +33,15 @@ function SendMessage({trigger, myUsername, addressee, changeTheMsgs }) {
     return (trigger) ? (
         <>
         <div className="text-send">
-            <div class="hiiii h-100">
-                <div class="row h-100">
-                    <div class="col-10 h-100">
+            <div className="hiiii h-100">
+                <div className="row h-100">
+                    <div className="col-10 h-100">
                         <div className="typing h-100">
                             <input type="text" value={val} id="text" placeholder="Enter text here..."></input>
                         </div>
                     </div>
-                    <div class="col order-last">
-                        <button type="submit" class="btn btn-success" onClick={() => handleSend()}
+                    <div className="col order-last">
+                        <button type="submit" className="btn btn-success" onClick={() => handleSend()}
                         >Send</button>
                     </div>
                 </div>

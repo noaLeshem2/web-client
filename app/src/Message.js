@@ -10,13 +10,13 @@ function Message({ type, text, time, mine }) {
         if (type.localeCompare('text') == 0) {
             return (
                 <>
-                    <div class="row message-body">
-                        <div class="col-sm-12">
-                            <div class="receiver">
-                                <div class="message-text">
+                    <div className="row message-body">
+                        <div className="col-sm-12">
+                            <div className="receiver">
+                                <div className="message-text">
                                     {text}
                                 </div>
-                                <span class="message-time pull-right">
+                                <span className="message-time pull-right">
                                     {time}
                                 </span>
                             </div>
@@ -30,13 +30,13 @@ function Message({ type, text, time, mine }) {
         if(type.localeCompare('image') == 0){
             return (
                 <>
-                    <div class="row message-body">
-                        <div class="col-sm-12">
-                            <div class="receiver">
+                    <div className="row message-body">
+                        <div className="col-sm-12">
+                            <div className="receiver">
                                 <div className="message-img">
                                     <img src= {text}></img>
                                 </div>
-                                <span class="message-time pull-right">
+                                <span className="message-time pull-right">
                                     {time}
                                 </span>
                             </div>
@@ -48,13 +48,13 @@ function Message({ type, text, time, mine }) {
         else if(type.localeCompare('audio') == 0) {
             return (
                 <>
-                <div class="row message-body">
-                      <div class="col-sm-12">
-                          <div class="receiver">
+                <div className="row message-body">
+                      <div className="col-sm-12">
+                          <div className="receiver">
                               <div className="message-img">
                               <audio controls src={text}></audio>
                               </div>
-                              <span class="message-time pull-right">
+                              <span className="message-time pull-right">
                                   {time}
                               </span>
                           </div>
@@ -69,13 +69,13 @@ function Message({ type, text, time, mine }) {
             console.log("videoooooooo")
             return (
                 <>
-                    <div class="row message-body">
-                        <div class="col-sm-12">
-                            <div class="receiver">
+                    <div className="row message-body">
+                        <div className="col-sm-12">
+                            <div className="receiver">
                                 <div className="message-video">
                                     <video controls src= {text}></video>
                                 </div>
-                                <span class="message-time pull-right">
+                                <span className="message-time pull-right">
                                     {time}
                                 </span>
                             </div>
@@ -92,13 +92,13 @@ function Message({ type, text, time, mine }) {
         if (type.localeCompare('text') == 0) {
             return (
                 <>
-                    <div class="row message-body">
-                        <div class="col-sm-12">
-                            <div class="sender">
-                                <div class="message-text">
+                    <div className="row message-body">
+                        <div className="col-sm-12">
+                            <div className="sender">
+                                <div className="message-text">
                                     {text}
                                 </div>
-                                <span class="message-time pull-right">
+                                <span className="message-time pull-right">
                                     {time}
                                 </span>
                             </div>
@@ -111,13 +111,13 @@ function Message({ type, text, time, mine }) {
         else if (type.localeCompare('image') == 0){
             return (
                 <>
-                    <div class="row message-body">
-                        <div class="col-sm-12">
-                            <div class="sender">
+                    <div className="row message-body">
+                        <div className="col-sm-12">
+                            <div className="sender">
                                 <div className="message-img">
                                     <img src= {text}></img>
                                 </div>
-                                <span class="message-time pull-right">
+                                <span className="message-time pull-right">
                                     {time}
                                 </span>
                             </div>
@@ -130,13 +130,13 @@ function Message({ type, text, time, mine }) {
         else if(type.localeCompare('audio') == 0) {
             return (
                 <>
-                  <div class="row message-body">
-                        <div class="col-sm-12">
-                            <div class="sender">
+                  <div className="row message-body">
+                        <div className="col-sm-12">
+                            <div className="sender">
                                 <div className="message-img">
                                 <audio controls src={text}></audio>
                                 </div>
-                                <span class="message-time pull-right">
+                                <span className="message-time pull-right">
                                     {time}
                                 </span>
                             </div>
@@ -151,13 +151,13 @@ function Message({ type, text, time, mine }) {
         else if (type.localeCompare('video') == 0){
             return (
                 <>
-                    <div class="row message-body">
-                        <div class="col-sm-12">
-                            <div class="sender">
+                    <div className="row message-body">
+                        <div className="col-sm-12">
+                            <div className="sender">
                                 <div className="message-video">
                                     <video controls src= {text}></video>
                                 </div>
-                                <span class="message-time pull-right">
+                                <span className="message-time pull-right">
                                     {time}
                                 </span>
                             </div>
