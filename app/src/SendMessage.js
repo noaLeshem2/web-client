@@ -19,10 +19,17 @@ function SendMessage({trigger, myUsername, addressee, changeTheMsgs }) {
         }
         console.log(userMap);
         //adding the text message to the two converasions.
+        function addZero(variable){
+            if(variable < 10){
+                return (variable = "0" + variable);
+            }
+            return(variable);
+        }
         var today = new Date();
-        var time = today.getHours() + ":" + today.getMinutes();
+        var hour=addZero(today.getHours())
+        var minute=addZero(today.getMinutes())
+        var time = hour + ":" + minute;
         userMap[myUsername].myFriends[addressee].push({ type: "text", text: textMessage, time: time, mine: true });
-        //userMap[addressee].myFriends[myUsername].push({ type: 1, text: textMessage, time: "13:00", mine: false });
         //changing the messages state
         var chatFriend = userMap[myUsername].myFriends[addressee];
         //setMsgs(msgs=>fakeChat);

@@ -4,6 +4,19 @@ import Record from './Record';
 import { useState } from 'react';
 
 function ChatingWith({ myUsername, friendTop, changeTheMsgs }) {
+
+    
+    function addZero(variable){
+        if(variable < 10){
+            return (variable = "0" + variable);
+        }
+        return(variable);
+    }
+    var today = new Date();
+    var hour=addZero(today.getHours())
+    var minute=addZero(today.getMinutes())
+    var time = hour + ":" + minute;
+
     const [srcOfAudio, setSrcOfAudio] = useState();
     const [recMessage, setRecMessage] = useState(false)
     var record = false;
@@ -26,8 +39,8 @@ function ChatingWith({ myUsername, friendTop, changeTheMsgs }) {
                         const audioUrl = URL.createObjectURL(audioBlob);
                         // the text that we send
                         //adding the text message to the two converasions.
-                        userMap[myUsername].myFriends[friendTop].push({ type: "audio", text: audioUrl, time: "13:00", mine: true });
-                        //userMap[addressee].myFriends[myUsername].push({ type: 1, text: textMessage, time: "13:00", mine: false });
+                        userMap[myUsername].myFriends[friendTop].push({ type: "audio", text: audioUrl, time: time, mine: true });
+                        //userMap[addressee].myFriends[myUsername].push({ type: 1, text: textMessage, time: time, mine: false });
                         //changing the messages state
                         var chatFriend = userMap[myUsername].myFriends[friendTop];
                         //setMsgs(msgs=>fakeChat);
@@ -53,13 +66,14 @@ function ChatingWith({ myUsername, friendTop, changeTheMsgs }) {
         return (<></>);
     }
 
+
     function handleAddPicture(type) {
         var el = document.getElementById("input-image-id");
         var reader = new FileReader();
         var file = el.files[0];
         //add to the messages
         reader.onload = (e) => {
-            userMap[myUsername].myFriends[friendTop].push({ type: "image", text: e.target.result, time: "13:00", mine: true });
+            userMap[myUsername].myFriends[friendTop].push({ type: "image", text: e.target.result, time: time, mine: true });
             var chatFriend = userMap[myUsername].myFriends[friendTop];
             changeTheMsgs(chatFriend);
         
@@ -75,7 +89,7 @@ function ChatingWith({ myUsername, friendTop, changeTheMsgs }) {
         var file = el.files[0];
         //add to the messages
         reader.onload = (e) => {
-            userMap[myUsername].myFriends[friendTop].push({ type: "video", text: e.target.result, time: "13:00", mine: true });
+            userMap[myUsername].myFriends[friendTop].push({ type: "video", text: e.target.result, time: time, mine: true });
             var chatFriend = userMap[myUsername].myFriends[friendTop];
             changeTheMsgs(chatFriend);
            
