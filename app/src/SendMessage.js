@@ -25,7 +25,6 @@ function SendMessage({trigger, myUsername, addressee, changeTheMsgs }) {
         //userMap[addressee].myFriends[myUsername].push({ type: 1, text: textMessage, time: "13:00", mine: false });
         //changing the messages state
         var chatFriend = userMap[myUsername].myFriends[addressee];
-        var fakeChat = userMap.fakeOne.myFriends.notReal;
         //setMsgs(msgs=>fakeChat);
         changeTheMsgs(chatFriend);
         //setVal(() => "")
