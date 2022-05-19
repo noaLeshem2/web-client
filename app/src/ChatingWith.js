@@ -11,7 +11,7 @@ function ChatingWith({ myUsername, friendTop, changeTheMsgs }) {
             return (variable = "0" + variable);
         }
         return(variable);
-    }
+    } 
     var today = new Date();
     var hour=addZero(today.getHours())
     var minute=addZero(today.getMinutes())
