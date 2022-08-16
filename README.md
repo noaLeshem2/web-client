@@ -1,6 +1,7 @@
 # In-Chat Project by Inbal & Noa
 Meet our chat for contact and share data.
 ## The required installations. 
+The installations should be inside the app directory.
 * npm
 * node.js
 * react-router-dom
@@ -26,7 +27,7 @@ username = yair39, password = 5678. <br/>
 username = michal321, password = 0987. <br/>
 *to see the chat we created in hard-coded, use one of the usernames and passowrds above.*
 ## How to run the project?
-In the app directory you need to install the required installations above and run the following command -
+Inside the app directory you need to install the required installations above and run the following command -
 ```bash
 npm start
 ```
