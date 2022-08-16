@@ -27,7 +27,7 @@ username = yair39, password = 5678. <br/>
 username = michal321, password = 0987. <br/>
 *to see the chat we created in hard-coded, use one of the usernames and passowrds above.*
 ## How to run the project?
-Inside the app directory you need to install the required installations above and run the following command -
+<strong>Inside</strong> the app directory you need to install the required installations above and run the following command -
 ```bash
 npm start
 ```
